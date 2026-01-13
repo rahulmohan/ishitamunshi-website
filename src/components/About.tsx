@@ -6,9 +6,10 @@ import { useRef } from "react";
 const education = [
   {
     degree: "Ph.D. in Psychology",
-    field: "Developmental Science",
+    field: "Psychology",
     institution: "Wayne State University",
     year: "2023 – 2028 (Expected)",
+    major: "Developmental Psychology",
     minors: "Clinical & Quantitative Psychology",
   },
   {
@@ -71,9 +72,10 @@ export default function About() {
           >
             <div className="space-y-6 font-[family-name:var(--font-inter)] text-[--muted] font-light leading-relaxed">
               <p>
-                I am a doctoral candidate in Developmental Science at Wayne State University,
+                I am a doctoral candidate in Psychology at Wayne State University,
                 where my research focuses on understanding the complex pathways through which
-                early life experiences shape adolescent relationship dynamics.
+                early life experiences shape adolescent relationship dynamics. I have obtained
+                interdisciplinary training in developmental, clinical, and quantitative psychology.
               </p>
               <p>
                 My work integrates perspectives from developmental psychology, clinical science,
@@ -140,6 +142,11 @@ export default function About() {
                   <p className="font-[family-name:var(--font-inter)] text-sm text-[--muted] mb-1">
                     {edu.institution}
                   </p>
+                  {edu.major && (
+                    <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted]">
+                      Major: {edu.major}
+                    </p>
+                  )}
                   {edu.minors && (
                     <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted]">
                       Minors: {edu.minors}

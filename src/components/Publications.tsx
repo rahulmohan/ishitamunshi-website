@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const publications = [
   {
@@ -71,6 +71,35 @@ const underReview = [
   },
 ];
 
+// Count-up animation hook
+function CountUp({ value, isInView }: { value: number; isInView: boolean }) {
+  const [displayValue, setDisplayValue] = useState(0);
+  const hasAnimatedRef = useRef(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimatedRef.current) {
+      hasAnimatedRef.current = true;
+      let startTime: number;
+      const duration = 1500;
+
+      const animateValue = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setDisplayValue(Math.round(eased * value));
+
+        if (progress < 1) {
+          requestAnimationFrame(animateValue);
+        }
+      };
+
+      requestAnimationFrame(animateValue);
+    }
+  }, [isInView, value]);
+
+  return <>{displayValue}</>;
+}
+
 export default function Publications() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -113,12 +142,11 @@ export default function Publications() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-3 gap-4 sm:gap-8 mb-16 max-w-2xl mx-auto"
+          className="grid grid-cols-2 gap-4 sm:gap-8 mb-16 max-w-xl mx-auto"
         >
           {[
-            { number: "7", label: "Journal", sublabel: "Articles" },
-            { number: "35+", label: "Conference", sublabel: "Papers" },
-            { number: "4", label: "Under", sublabel: "Review" },
+            { number: 7, label: "Journal", sublabel: "Articles" },
+            { number: 3, label: "Under", sublabel: "Review" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -128,7 +156,7 @@ export default function Publications() {
               className="text-center p-4 sm:p-6 border border-[--border] hover:border-[--accent] transition-colors duration-300"
             >
               <span className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-light gradient-text">
-                {stat.number}
+                <CountUp value={stat.number} isInView={isInView} />
               </span>
               <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-2 tracking-wide">
                 {stat.label}

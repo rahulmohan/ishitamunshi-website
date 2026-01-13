@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const researchProjects = [
   {
@@ -20,7 +20,7 @@ const researchProjects = [
     pi: "Valerie Simon, Ph.D.",
     period: "2024 – Present",
     description:
-      "Conducting confirmatory factor analysis and manuscript preparation for cross-sectional data of sexual and gender minority young adults.",
+      "Conducting literature review, confirmatory factor analysis, data management, and manuscript preparation examining cross-sectional data of sexual and gender minority young adults.",
   },
   {
     title: "Project MiSTAR",
@@ -29,25 +29,97 @@ const researchProjects = [
     pi: "Valerie Simon, Ph.D.",
     period: "2023 – Present",
     description:
-      "Analyzing longitudinal data on teenage girls exposed to interpersonal violence, focusing on literature review, data analysis, and manuscript development.",
+      "Analyzing longitudinal data on teenage girls (predominantly Black) exposed to interpersonal violence from an urban Midwest city. Working on literature review, data analysis, data management, and two in-preparation manuscripts.",
   },
   {
-    title: "DYAD Study",
-    role: "Project Coordinator",
+    title: "CADRI Pronoun Study",
+    role: "Team Lead, Graduate Research Assistant",
+    institution: "Cleveland State University",
+    pi: "Elizabeth A. Goncy, Ph.D.",
+    period: "2022 – Present",
+    description:
+      "Examining pronoun-specific usage and validity of the Conflict in Adolescent Dating Relationship Inventory (CADRI), investigating alcohol and drug use, adverse childhood experiences, attitudes towards intimate partner violence, and mental health outcomes. Leading data cleaning, abstract writing, and undergraduate/graduate RA training.",
+  },
+  {
+    title: "DYAD-2: Dating in Young Adults (Couples Perspective)",
+    role: "Project Coordinator & Co-Investigator",
     institution: "Cleveland State University",
     pi: "Elizabeth A. Goncy, Ph.D.",
     period: "2020 – Present",
     description:
-      "Coordinating research on young adult couples' interactions and dating concepts, examining healthy and unhealthy dating behaviors, substance use, and mental health outcomes.",
+      "Coordinating research examining how young adult couples interact and understand dating concepts including dating abuse and the role of technology in an in-person lab setting. Wave II is a post-COVID-19 re-examination observing pandemic impacts on dating behaviors, substance use, and mental health. Responsible for IRB preparation, study design, data collection, and analysis.",
   },
   {
-    title: "NSF ADVANCE Grant",
+    title: "DYAD: Dating in Young Adults Study",
+    role: "Team Lead for Qualitative Coding, Graduate Research Assistant",
+    institution: "Cleveland State University",
+    pi: "Elizabeth A. Goncy, Ph.D.",
+    period: "2020 – Present",
+    description:
+      "Leading qualitative coding for mixed-method study investigating dating relationships in young adults. Conducted interview transcription, content analyses using NVivo examining definitions of dating violence, technology and relationships, dating abuse perpetration/victimization, cognitive emotion regulation, and mental health outcomes.",
+  },
+  {
+    title: "EPPA: Early Pregnancy and Parent Attachment Study",
+    role: "Team Lead, Graduate Research Assistant",
+    institution: "Cleveland State University",
+    pi: "Elizabeth A. Goncy, Ph.D.",
+    period: "2020 – Present",
+    description:
+      "Leading retrospective cross-sectional study of women who became parents during teenage years examining their relationships with parents, sex education (contraceptive education), and access to sexual health resources. Conducting manuscript writing, qualitative coding, content analyses, and data analysis.",
+  },
+  {
+    title: "Rape Vignettes Study",
+    role: "Graduate Research Assistant",
+    institution: "Cleveland State University",
+    pi: "Elizabeth A. Goncy, Ph.D.",
+    period: "2021 – 2022",
+    description:
+      "Assessing college students' perceptions and myths about different types of sexual assault and rape. Conducted IRB preparation, study design, vignette construction, data collection via online survey examining rape myth acceptance, sexual double standards, and personality factors.",
+  },
+  {
+    title: "Parental Support and Romantic Relationships Study",
+    role: "Graduate Research Assistant",
+    institution: "Cleveland State University",
+    pi: "Elizabeth A. Goncy, Ph.D.",
+    period: "2021",
+    description:
+      "Evaluating associations between parental acceptance/rejection and romantic relationships (including LGBTQ+ youth) using online retrospective survey. Examining constructs including romantic satisfaction and romantic attachment.",
+  },
+  {
+    title: "PSU: Parenting and Substance Use Study",
+    role: "Graduate Research Assistant",
+    institution: "Cleveland State University",
+    pi: "Elizabeth A. Goncy, Ph.D.",
+    period: "2020 – 2022",
+    description:
+      "Investigating links between substance use in young adults (alcohol, marijuana, cigarettes, cocaine) and parenting styles during childhood. Conducting data compilation, codebook drafting, data analyses, and advising undergraduate students.",
+  },
+  {
+    title: "RARA: Risk and Resilience in Adolescence Study",
+    role: "Graduate Research Assistant",
+    institution: "Cleveland State University",
+    pi: "Elizabeth A. Goncy, Ph.D.",
+    period: "2020 – 2021",
+    description:
+      "Examining risk factors (childhood abuse), resilience, and protective factors (parent-child communication) in understanding dating relationships, mental health, and sexual health outcomes for high school adolescents.",
+  },
+  {
+    title: "NSF ADVANCE Adaptation Grant (FLAGS Program)",
     role: "Graduate Research Assistant",
     institution: "Cleveland State University",
     pi: "Michael Horvath, Ph.D.",
     period: "2022 – 2023",
     description:
-      "Contributing to gender equity research among STEM faculty through statistical analysis, literature review, and conference submissions for the FLAGS program.",
+      "Contributing to Faculty Leaders Advancing Gender Equity in STEM (FLAGS) program aimed at improving gender equity among STEM faculty. Conducting literature review, statistical analyses using SPSS and AMOS, writing summaries/memos, data cleaning/management, and aiding conference submissions on work-life balance and gender equity.",
+  },
+  {
+    title: "Mood and Emotion Regulation (MER) Lab",
+    role: "Graduate Research Assistant",
+    institution: "Cleveland State University",
+    pi: "Ilya Yaroslavsky, Ph.D.",
+    period: "2022",
+    description:
+      "Worked on two studies: (1) Coding naturalistic observational data from clinical and community samples using Electronically Activated Recording method, and (2) Online survey on internalizing problems, emotion regulation, interpersonal differences, and mental health outcomes.",
   },
 ];
 
@@ -71,6 +143,35 @@ const clinicalExperience = [
     description: "Administered psychological assessments for juveniles' competency evaluations and custody cases referred from Child Protective Services.",
   },
 ];
+
+// Count-up animation hook
+function CountUp({ value, isInView }: { value: number; isInView: boolean }) {
+  const [displayValue, setDisplayValue] = useState(0);
+  const hasAnimatedRef = useRef(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimatedRef.current) {
+      hasAnimatedRef.current = true;
+      let startTime: number;
+      const duration = 1500;
+
+      const animateValue = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setDisplayValue(Math.round(eased * value));
+
+        if (progress < 1) {
+          requestAnimationFrame(animateValue);
+        }
+      };
+
+      requestAnimationFrame(animateValue);
+    }
+  }, [isInView, value]);
+
+  return <>{displayValue}</>;
+}
 
 export default function Research() {
   const ref = useRef(null);
@@ -174,7 +275,7 @@ export default function Research() {
               className="text-center mb-12 p-8 bg-white border border-[--border]"
             >
               <span className="font-[family-name:var(--font-cormorant)] text-6xl font-light gradient-text">
-                750+
+                <CountUp value={750} isInView={isInView} />+
               </span>
               <p className="font-[family-name:var(--font-inter)] text-sm text-[--muted] mt-2 tracking-wide">
                 Total Supervised Clinical Hours

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const awards = [
   {
@@ -9,7 +9,7 @@ const awards = [
     source: "Merrill Palmer Skillman Institute",
     year: "2025",
     amount: "$3,000",
-    description: "Competitive fellowship emphasizing interdisciplinary research, advanced training, and community outreach in developmental science.",
+    description: "Competitive fellowship emphasizing interdisciplinary research, advanced training, and community outreach in psychology.",
     type: "fellowship",
   },
   {
@@ -61,6 +61,35 @@ const affiliations = [
   { name: "Psi-Chi International Honor Society", role: "Member", year: "2022" },
   { name: "Society for Research on Adolescence", role: "Member", year: "2022" },
 ];
+
+// Count-up animation for dollar amounts - must be outside main component
+function CountUpDollar({ value, isInView }: { value: number; isInView: boolean }) {
+  const [displayValue, setDisplayValue] = useState(0);
+  const hasAnimatedRef = useRef(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimatedRef.current) {
+      hasAnimatedRef.current = true;
+      let startTime: number;
+      const duration = 1500;
+
+      const animateValue = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setDisplayValue(Math.round(eased * value));
+
+        if (progress < 1) {
+          requestAnimationFrame(animateValue);
+        }
+      };
+
+      requestAnimationFrame(animateValue);
+    }
+  }, [isInView, value]);
+
+  return <>${displayValue.toLocaleString()}+</>;
+}
 
 export default function Awards() {
   const ref = useRef(null);
@@ -116,7 +145,7 @@ export default function Awards() {
           className="text-center mb-16"
         >
           <span className="font-[family-name:var(--font-cormorant)] text-6xl sm:text-7xl font-light gradient-text">
-            $16,000+
+            <CountUpDollar value={16000} isInView={isInView} />
           </span>
           <p className="font-[family-name:var(--font-inter)] text-sm text-[--muted] mt-4 tracking-wide">
             Total Research Funding & Awards

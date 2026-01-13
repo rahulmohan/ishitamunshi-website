@@ -17,12 +17,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ishita Munshi | Developmental Psychologist",
+  title: "Ishita Munshi | Psychology Doctoral Student",
   description: "Ph.D. Candidate in Developmental Psychology at Wayne State University. Research focused on adolescent relationships, dating violence, and developmental outcomes.",
-  keywords: ["psychology", "developmental science", "research", "dating violence", "adolescent development", "Wayne State University"],
+  keywords: ["psychology", "psychology", "research", "dating violence", "adolescent development", "Wayne State University"],
   authors: [{ name: "Ishita Munshi" }],
   openGraph: {
-    title: "Ishita Munshi | Developmental Psychologist",
+    title: "Ishita Munshi | Psychology Doctoral Student",
     description: "Ph.D. Candidate in Developmental Psychology at Wayne State University",
     type: "website",
   },

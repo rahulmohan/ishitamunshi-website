@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const teachingExperience = [
   {
@@ -52,6 +52,37 @@ const workshops = [
     coPresenter: "Elizabeth A. Goncy, Ph.D.",
   },
 ];
+
+// Count-up animation hook with suffix support
+function CountUpWithSuffix({ value, isInView }: { value: string; isInView: boolean }) {
+  const numValue = parseInt(value.replace(/[^0-9]/g, ""));
+  const suffix = value.replace(/[0-9]/g, "");
+  const [displayValue, setDisplayValue] = useState(0);
+  const hasAnimatedRef = useRef(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimatedRef.current) {
+      hasAnimatedRef.current = true;
+      let startTime: number;
+      const duration = 1500;
+
+      const animateValue = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setDisplayValue(Math.round(eased * numValue));
+
+        if (progress < 1) {
+          requestAnimationFrame(animateValue);
+        }
+      };
+
+      requestAnimationFrame(animateValue);
+    }
+  }, [isInView, numValue]);
+
+  return <>{displayValue}{suffix}</>;
+}
 
 export default function Teaching() {
   const ref = useRef(null);
@@ -107,7 +138,7 @@ export default function Teaching() {
           ].map((stat, index) => (
             <div key={stat.label} className="text-center">
               <span className="font-[family-name:var(--font-cormorant)] text-4xl font-light gradient-text">
-                {stat.value}
+                <CountUpWithSuffix value={stat.value} isInView={isInView} />
               </span>
               <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-2 tracking-wide">
                 {stat.label}

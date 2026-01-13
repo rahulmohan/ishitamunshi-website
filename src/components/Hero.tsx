@@ -73,7 +73,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-[family-name:var(--font-inter)] text-xs tracking-[0.3em] uppercase text-[--muted] mb-6"
         >
-          Developmental Psychologist
+          Psychology Doctoral Student
         </motion.p>
 
         {/* Main name */}

@@ -20,7 +20,7 @@ export default function Footer() {
               Ishita Munshi
             </span>
             <p className="font-[family-name:var(--font-inter)] text-xs text-white/50 mt-1">
-              Developmental Psychologist
+              Psychology Doctoral Student
             </p>
           </motion.div>
 
