@@ -235,10 +235,11 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-12 grid grid-cols-3 gap-6"
+              className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6"
             >
               {[
                 { number: "6+", label: "Publications" },
+                { number: "19+", label: "Citations" },
                 { number: "37+", label: "Presentations" },
                 { number: "750+", label: "Clinical Hours" },
               ].map((stat) => (

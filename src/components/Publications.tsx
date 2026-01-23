@@ -124,7 +124,7 @@ export default function Publications() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center mb-16"
+          className="flex justify-center gap-6 mb-16"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -139,6 +139,19 @@ export default function Publications() {
               Journal
               <br />
               Articles
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-center p-4 sm:p-6 border border-[--border] hover:border-[--accent] transition-colors duration-300 min-w-[150px]"
+          >
+            <span className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-light gradient-text">
+              <CountUp value={19} isInView={isInView} />+
+            </span>
+            <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-2 tracking-wide">
+              Citations
             </p>
           </motion.div>
         </motion.div>
