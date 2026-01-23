@@ -73,7 +73,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-[family-name:var(--font-inter)] text-xs tracking-[0.3em] uppercase text-[--muted] mb-6"
         >
-          Psychology Doctoral Student
+          Psychologist in the Making
         </motion.p>
 
         {/* Main name */}
@@ -94,9 +94,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="font-[family-name:var(--font-inter)] text-base sm:text-lg font-light text-[--muted] max-w-2xl mx-auto leading-relaxed mb-10"
         >
-          Ph.D. Candidate at Wayne State University exploring the intersections of
-          adolescent development, interpersonal relationships, psychological resilience, and
-          artificial intelligence's impact on human development and behavior.
+          Ph.D. Candidate in Psychology at Wayne State University exploring
+          dating relationships, with a focus on how technology—particularly
+          AI—shapes love, attachment, and romantic connections with AI chatbots.
         </motion.p>
 
         {/* CTA Buttons */}

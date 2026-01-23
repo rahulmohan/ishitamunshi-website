@@ -1,7 +1,38 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+
+// Count-up animation component with suffix support
+function CountUpWithSuffix({ value, isInView }: { value: string; isInView: boolean }) {
+  const numValue = parseInt(value.replace(/[^0-9]/g, ""));
+  const suffix = value.replace(/[0-9]/g, "");
+  const [displayValue, setDisplayValue] = useState(0);
+  const hasAnimatedRef = useRef(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimatedRef.current) {
+      hasAnimatedRef.current = true;
+      let startTime: number;
+      const duration = 1500;
+
+      const animateValue = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setDisplayValue(Math.round(eased * numValue));
+
+        if (progress < 1) {
+          requestAnimationFrame(animateValue);
+        }
+      };
+
+      requestAnimationFrame(animateValue);
+    }
+  }, [isInView, numValue]);
+
+  return <>{displayValue}{suffix}</>;
+}
 
 const education = [
   {
@@ -27,13 +58,16 @@ const education = [
 ];
 
 const researchInterests = [
-  "Adolescent Dating Relationships",
-  "Interpersonal Violence",
-  "Developmental Psychopathology",
+  "Dating Relationships",
+  "Intimate Partner Violence (IPV)",
   "Technology & Relationships",
-  "Childhood Adversity",
-  "Emotion Regulation",
-  "AI & Human Development",
+  "Adverse Childhood Experiences (ACEs)",
+  "AI & Relationships",
+];
+
+const populationsOfInterest = [
+  "Adolescents",
+  "Emerging Adults",
 ];
 
 export default function About() {
@@ -110,6 +144,26 @@ export default function About() {
                 ))}
               </div>
             </div>
+
+            {/* Populations of Interest */}
+            <div className="mt-8">
+              <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-medium mb-6">
+                Populations of Interest
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {populationsOfInterest.map((population, index) => (
+                  <motion.span
+                    key={population}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ duration: 0.4, delay: 0.6 + index * 0.05 }}
+                    className="px-4 py-2 bg-[--background] border border-[--border] text-sm font-[family-name:var(--font-inter)] text-[--muted] hover:border-[--accent] hover:text-[--accent] transition-colors duration-300"
+                  >
+                    {population}
+                  </motion.span>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           {/* Education section */}
@@ -170,7 +224,7 @@ export default function About() {
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <span className="font-[family-name:var(--font-cormorant)] text-3xl font-light gradient-text">
-                    {stat.number}
+                    <CountUpWithSuffix value={stat.number} isInView={isInView} />
                   </span>
                   <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-1 tracking-wide">
                     {stat.label}

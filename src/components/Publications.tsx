@@ -48,7 +48,6 @@ const publications = [
     year: "2021",
     title: "The Skin Color Preference of Lighter and Darker Skin Colored Males and Females",
     journal: "International Journal of Indian Psychology, 9(3), 615-633",
-    doi: "10.25215/0903.059",
     type: "journal",
   },
 ];
