@@ -44,15 +44,6 @@ const teachingExperience = [
   },
 ];
 
-const workshops = [
-  {
-    title: "Dating abuse among teens: Implications for mental health intervention",
-    venue: "Ohio Psychological Association",
-    year: "2022",
-    coPresenter: "Elizabeth A. Goncy, Ph.D.",
-  },
-];
-
 // Count-up animation hook with suffix support
 function CountUpWithSuffix({ value, isInView }: { value: string; isInView: boolean }) {
   const numValue = parseInt(value.replace(/[^0-9]/g, ""));
@@ -185,45 +176,6 @@ export default function Teaching() {
           ))}
         </div>
 
-        {/* Workshop section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="mt-20"
-        >
-          <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-center mb-8">
-            Professional Workshops
-          </h3>
-          <div className="max-w-2xl mx-auto">
-            {workshops.map((workshop, index) => (
-              <motion.div
-                key={workshop.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                className="p-6 bg-white border border-[--border] hover:border-[--accent] transition-colors duration-300"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h4 className="font-[family-name:var(--font-cormorant)] text-lg font-medium mb-2">
-                      {workshop.title}
-                    </h4>
-                    <p className="font-[family-name:var(--font-inter)] text-sm text-[--muted]">
-                      {workshop.venue}
-                    </p>
-                    <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-1">
-                      Co-presented with {workshop.coPresenter}
-                    </p>
-                  </div>
-                  <span className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-[--accent]">
-                    {workshop.year}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

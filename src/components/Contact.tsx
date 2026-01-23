@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const contactInfo = {
-  email: "hp1342@wayne.edu",
+  email: "ishita.munshi@wayne.edu",
   location: "Detroit, MI",
   institution: "Wayne State University",
   department: "Department of Psychology",

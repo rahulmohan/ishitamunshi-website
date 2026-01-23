@@ -17,9 +17,9 @@ export default function Home() {
       <Hero />
       <MediaBanner />
       <About />
-      <Research />
       <Publications />
       <Presentations />
+      <Research />
       <Teaching />
       <Awards />
       <Contact />

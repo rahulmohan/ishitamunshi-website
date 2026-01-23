@@ -13,21 +13,40 @@ function CountUpWithSuffix({ value, isInView }: { value: string; isInView: boole
   useEffect(() => {
     if (isInView && !hasAnimatedRef.current) {
       hasAnimatedRef.current = true;
-      let startTime: number;
-      const duration = 1500;
 
-      const animateValue = (timestamp: number) => {
-        if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        setDisplayValue(Math.round(eased * numValue));
+      // For small numbers, use step-based animation
+      // For larger numbers, use time-based animation
+      if (numValue <= 50) {
+        // Step through each number with a delay
+        let current = 0;
+        const stepDelay = Math.max(50, 1500 / numValue); // At least 50ms per step
 
-        if (progress < 1) {
-          requestAnimationFrame(animateValue);
-        }
-      };
+        const stepUp = () => {
+          current++;
+          setDisplayValue(current);
+          if (current < numValue) {
+            setTimeout(stepUp, stepDelay);
+          }
+        };
+        stepUp();
+      } else {
+        // Use smooth animation for larger numbers
+        let startTime: number;
+        const duration = 1500;
 
-      requestAnimationFrame(animateValue);
+        const animateValue = (timestamp: number) => {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setDisplayValue(Math.round(eased * numValue));
+
+          if (progress < 1) {
+            requestAnimationFrame(animateValue);
+          }
+        };
+
+        requestAnimationFrame(animateValue);
+      }
     }
   }, [isInView, numValue]);
 
@@ -63,6 +82,7 @@ const researchInterests = [
   "Technology & Relationships",
   "Adverse Childhood Experiences (ACEs)",
   "AI & Relationships",
+  "Sexual Health and Behavior",
 ];
 
 const populationsOfInterest = [
