@@ -164,9 +164,9 @@ export default function About() {
               className="mt-12 grid grid-cols-3 gap-6"
             >
               {[
-                { number: "7+", label: "Publications" },
+                { number: "6+", label: "Publications" },
+                { number: "37+", label: "Presentations" },
                 { number: "750+", label: "Clinical Hours" },
-                { number: "200+", label: "Students Taught" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <span className="font-[family-name:var(--font-cormorant)] text-3xl font-light gradient-text">

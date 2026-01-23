@@ -53,23 +53,6 @@ const publications = [
   },
 ];
 
-const underReview = [
-  {
-    authors: "Munshi, I., & Mohan, R.",
-    title: "Prompting the Prohibited: A Large-Scale Thematic Analysis of Toxic Information Behavior on ChatGPT",
-    journal: "Online Information Review",
-  },
-  {
-    authors: "Cosby, J., Simon, V.A., & Munshi, I.",
-    title: "Longitudinal Associations between Posttraumatic Stress and Close Friendship Quality among Violence-Exposed Adolescent Girls",
-    journal: "Journal of Interpersonal Violence",
-  },
-  {
-    authors: "Horvath. M., Bracken, C. M., Munshi, I., Dong, L., & Goodell, J. E.",
-    title: "Is gender a proxy for career prioritization? Exploring relationships between gender, career prioritization, and work-life outcomes",
-    journal: "Community, Work, and Family",
-  },
-];
 
 // Count-up animation hook
 function CountUp({ value, isInView }: { value: number; isInView: boolean }) {
@@ -142,29 +125,23 @@ export default function Publications() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 gap-4 sm:gap-8 mb-16 max-w-xl mx-auto"
+          className="flex justify-center mb-16"
         >
-          {[
-            { number: 7, label: "Journal", sublabel: "Articles" },
-            { number: 3, label: "Under", sublabel: "Review" },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              className="text-center p-4 sm:p-6 border border-[--border] hover:border-[--accent] transition-colors duration-300"
-            >
-              <span className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-light gradient-text">
-                <CountUp value={stat.number} isInView={isInView} />
-              </span>
-              <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-2 tracking-wide">
-                {stat.label}
-                <br />
-                {stat.sublabel}
-              </p>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-center p-4 sm:p-6 border border-[--border] hover:border-[--accent] transition-colors duration-300 min-w-[150px]"
+          >
+            <span className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-light gradient-text">
+              <CountUp value={6} isInView={isInView} />+
+            </span>
+            <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-2 tracking-wide">
+              Journal
+              <br />
+              Articles
+            </p>
+          </motion.div>
         </motion.div>
 
         {/* Publications list */}
@@ -224,39 +201,6 @@ export default function Publications() {
             </button>
           </motion.div>
         )}
-
-        {/* Under review section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="mt-20"
-        >
-          <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-center mb-8">
-            Under Review
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {underReview.map((pub, index) => (
-              <motion.div
-                key={pub.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                className="p-6 border border-dashed border-[--border] hover:border-[--accent] transition-colors duration-300"
-              >
-                <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mb-2">
-                  {pub.authors}
-                </p>
-                <h4 className="font-[family-name:var(--font-cormorant)] text-lg font-medium mb-2 line-clamp-3">
-                  {pub.title}
-                </h4>
-                <p className="font-[family-name:var(--font-inter)] text-xs text-[--accent] italic">
-                  {pub.journal}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Scholar links */}
         <motion.div
