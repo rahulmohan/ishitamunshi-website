@@ -80,7 +80,7 @@ export default function Teaching() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="teaching" className="py-32 bg-[--background] relative overflow-hidden">
+    <section id="teaching" className="py-20 bg-[--background] relative overflow-hidden">
       {/* Decorative element */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-px h-2/3 bg-gradient-to-b from-transparent via-[--accent]/20 to-transparent" />
 

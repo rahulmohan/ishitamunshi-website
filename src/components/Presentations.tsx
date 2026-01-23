@@ -350,7 +350,7 @@ export default function Presentations() {
   return (
     <section
       id="presentations"
-      className="py-32 bg-[--background] relative overflow-hidden"
+      className="py-20 bg-[--background] relative overflow-hidden"
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">

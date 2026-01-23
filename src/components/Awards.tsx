@@ -108,7 +108,7 @@ export default function Awards() {
     : awards.filter((a) => a.type === activeFilter);
 
   return (
-    <section id="awards" className="py-32 bg-white relative overflow-hidden">
+    <section id="awards" className="py-20 bg-white relative overflow-hidden">
       {/* Decorative background pattern */}
       <div className="absolute inset-0 opacity-[0.015]">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">

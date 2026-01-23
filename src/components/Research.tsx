@@ -127,7 +127,7 @@ const clinicalExperience = [
   {
     title: "Wayne State Psychology Clinic",
     role: "Clinical Psychology Student Trainee",
-    period: "2023 – Present",
+    period: "2023 – 2025",
     description: "Conducting psychological assessments on children, adolescents, and adults (ages 6-33) including battery selection, administration, scoring, and report writing.",
   },
   {
@@ -179,7 +179,7 @@ export default function Research() {
   const [activeTab, setActiveTab] = useState<"research" | "clinical">("research");
 
   return (
-    <section id="research" className="py-32 bg-[--background] relative">
+    <section id="research" className="py-20 bg-[--background] relative">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         {/* Section header */}
         <motion.div
