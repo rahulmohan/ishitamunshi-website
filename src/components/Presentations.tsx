@@ -10,7 +10,6 @@ interface Presentation {
   year: string;
   location: string;
   type: "symposium" | "paper" | "poster" | "workshop" | "data-blitz";
-  status: "presented" | "under-review";
 }
 
 const presentations: Presentation[] = [
@@ -22,7 +21,6 @@ const presentations: Presentation[] = [
     year: "2023",
     location: "Boston, MA, United States",
     type: "symposium",
-    status: "presented",
   },
   {
     title: "Prior victimization and sexuality education among diverse young adults: Associations with dating sexual abuse victimization and perpetration",
@@ -31,19 +29,9 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "New York, NY, United States",
     type: "symposium",
-    status: "presented",
   },
 
   // Conference Paper Presentations
-  {
-    title: "Moral Disengagement in Human–AI Interaction: Evidence from 500,000 Naturalistic ChatGPT Conversations",
-    authors: "Munshi, I., & Mohan, R.",
-    conference: "Association for Psychological Science",
-    year: "2026",
-    location: "Barcelona, Spain",
-    type: "paper",
-    status: "under-review",
-  },
   {
     title: "Synergistic Role of ACEs: Alcohol & Impulsivity Predicting Dating Aggression",
     authors: "Munshi, I., Basting, E., Reich, K., Goncy, E.A.",
@@ -51,7 +39,6 @@ const presentations: Presentation[] = [
     year: "2025",
     location: "Chicago, IL",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Pathways from Childhood Victimization to Adolescent Dating Aggression: The Role of Caregiver Relationship Quality",
@@ -60,7 +47,6 @@ const presentations: Presentation[] = [
     year: "2025",
     location: "Wayne State University",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Dating Sexual Perpetration & Alcohol Use Moderated by Child Sexual Abuse",
@@ -69,7 +55,6 @@ const presentations: Presentation[] = [
     year: "2023",
     location: "Chicago, IL",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Alcohol and Drug Use Predicting Pandemic Cyber Dating Abuse",
@@ -78,7 +63,6 @@ const presentations: Presentation[] = [
     year: "2023",
     location: "Chicago, IL",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Gender, Childhood Abuse & Sexuality Education Associate with Emotional Dating Abuse",
@@ -87,7 +71,6 @@ const presentations: Presentation[] = [
     year: "2023",
     location: "Chicago, IL",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Social Support's Impact on Depression Symptomatology in Dating Abuse Victims",
@@ -96,7 +79,6 @@ const presentations: Presentation[] = [
     year: "2023",
     location: "Chicago, IL",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Are child sexual abuse and sexual related misdemeanor involvement related?",
@@ -105,7 +87,6 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "Chicago, IL",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Associations between romantic satisfaction and dating abuse among dating couples",
@@ -114,7 +95,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Chicago, IL",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Perceptions of trauma severity following rape relate to fewer rape myth",
@@ -123,7 +103,6 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "Seattle, WA",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Associations of family structure with age of onset, lifetime, and recent substance use among emerging adults",
@@ -132,7 +111,6 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "Seattle, WA",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Trauma symptoms and dating abuse perpetration and victimization: Examination of gender, sexual orientation, and race as moderators among emerging adults",
@@ -141,7 +119,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Associations of physical and sexual assault on subsequent young adult dating abuse",
@@ -150,7 +127,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Chicago, IL",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Influence of parental attachment on teen sexual education received from family",
@@ -159,7 +135,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Is social media jealousy in romantic relationships related to depression?",
@@ -168,7 +143,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "paper",
-    status: "presented",
   },
   {
     title: "Does maternal or paternal attachment improve teen access to contraceptives?",
@@ -177,19 +151,9 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "paper",
-    status: "presented",
   },
 
   // Conference Poster Presentations
-  {
-    title: "Psychometric Properties of the Conflict in Dating Relationships Inventory (Short-Form) Among Lesbian, Gay, and Bisexual Young Adults",
-    authors: "Munshi, I., Palmer, C., Simon, V. A.",
-    conference: "Association for Psychological Science",
-    year: "2026",
-    location: "Barcelona, Spain",
-    type: "poster",
-    status: "under-review",
-  },
   {
     title: "Disentangling Gender from Career Prioritization",
     authors: "Horvath. M., Bracken, C. M., Munshi, I., Dong, L., & Goodell, J. E.",
@@ -197,7 +161,6 @@ const presentations: Presentation[] = [
     year: "2026",
     location: "New Orleans, LA, United States",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Pathways from Childhood Victimization to Adolescent Dating Aggression: The Role of Caregiver Relationship Quality",
@@ -206,7 +169,6 @@ const presentations: Presentation[] = [
     year: "2025",
     location: "Minneapolis, MN",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Parent-child relationship buffers the association between depressive symptoms and physically aggressive behavior in adolescents",
@@ -215,7 +177,6 @@ const presentations: Presentation[] = [
     year: "2025",
     location: "Minneapolis, MN",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Young adults suggested interventions for different dating abuse scenarios",
@@ -224,7 +185,6 @@ const presentations: Presentation[] = [
     year: "2024",
     location: "Nashville, TN",
     type: "poster",
-    status: "presented",
   },
   {
     title: "The relationship between the big five personality traits and beliefs about rape prevention",
@@ -233,7 +193,6 @@ const presentations: Presentation[] = [
     year: "2023",
     location: "Chicago, IL",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Childhood Cancer, Posttraumatic Stress Symptoms, and Contributing Factors",
@@ -242,7 +201,6 @@ const presentations: Presentation[] = [
     year: "2023",
     location: "Chicago, IL",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Sexual trauma and self-efficacy for help-seeking in dating abuse",
@@ -251,7 +209,6 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "New York, NY",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Does Childhood Psychological or Physical Maltreatment by Mothers or Fathers Predict Subsequent Intimate Partner Violence in Romantic Relationships?",
@@ -260,7 +217,6 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "New York, NY",
     type: "poster",
-    status: "presented",
   },
   {
     title: "The Impact of Adverse Childhood Experiences on Assault",
@@ -269,7 +225,6 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "Atlanta, GA",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Parenting style and onset of adolescent cigarette, vapor, alcohol, and marijuana use",
@@ -278,7 +233,6 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "Virtual",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Does depression and affect relate to dating abuse perpetration and victimization history among emerging adults?",
@@ -287,7 +241,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Gender, attachment, and romantic relationship satisfaction: Testing novel methodology",
@@ -296,7 +249,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "poster",
-    status: "presented",
   },
   {
     title: "Do self-blaming and catastrophizing associate with dating abuse victimization and perpetration in dating young adults?",
@@ -305,7 +257,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "poster",
-    status: "presented",
   },
 
   // Conference Professional Workshops
@@ -316,7 +267,6 @@ const presentations: Presentation[] = [
     year: "2022",
     location: "Virtual",
     type: "workshop",
-    status: "presented",
   },
 
   // Conference Data Blitz
@@ -327,7 +277,6 @@ const presentations: Presentation[] = [
     year: "2023",
     location: "Philadelphia, PA",
     type: "data-blitz",
-    status: "presented",
   },
   {
     title: "Perspectives of emerging adult women on quality of school sexual education to prevent teen pregnancies and STIs",
@@ -336,7 +285,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "data-blitz",
-    status: "presented",
   },
 ];
 
@@ -490,13 +438,6 @@ export default function Presentations() {
               <div className="absolute top-6 right-6 px-3 py-1 bg-[--background] text-[--muted] font-[family-name:var(--font-inter)] text-xs">
                 {presentation.year}
               </div>
-
-              {/* Status Badge (if under review) */}
-              {presentation.status === "under-review" && (
-                <div className="absolute top-14 right-6 px-3 py-1 bg-amber-100 text-amber-800 font-[family-name:var(--font-inter)] text-[10px] tracking-wider uppercase">
-                  Under Review
-                </div>
-              )}
 
               <div className="mt-8">
                 {/* Title */}
