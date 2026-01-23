@@ -13,25 +13,17 @@ interface Presentation {
 }
 
 const presentations: Presentation[] = [
-  // Conference Symposia
+  // 2026
   {
-    title: "FLAGS: Faculty Leaders Advancing Gender Equity",
-    authors: "Horvath, M. et. al.",
-    conference: "ADVANCE-ing Gender Equity Among STEM Professors Through I-O Psychology [symposium]. Society for Industrial and Organizational Psychology Annual Conference",
-    year: "2023",
-    location: "Boston, MA, United States",
-    type: "symposium",
-  },
-  {
-    title: "Prior victimization and sexuality education among diverse young adults: Associations with dating sexual abuse victimization and perpetration",
-    authors: "Munshi, I., Goncy, E. A., Clonan-Roy, K., Fuller, K. A., & Naser, S.",
-    conference: "Exploring the risk factors for intimate partner violence in sexual and gender minority individuals [Symposium]. Association of Behavioral and Cognitive Therapy annual convention",
-    year: "2022",
-    location: "New York, NY, United States",
-    type: "symposium",
+    title: "Disentangling Gender from Career Prioritization",
+    authors: "Horvath. M., Bracken, C. M., Munshi, I., Dong, L., & Goodell, J. E.",
+    conference: "Society for Industrial and Organizational Psychology Annual Conference",
+    year: "2026",
+    location: "New Orleans, LA, United States",
+    type: "poster",
   },
 
-  // Conference Paper Presentations
+  // 2025
   {
     title: "Synergistic Role of ACEs: Alcohol & Impulsivity Predicting Dating Aggression",
     authors: "Munshi, I., Basting, E., Reich, K., Goncy, E.A.",
@@ -47,6 +39,42 @@ const presentations: Presentation[] = [
     year: "2025",
     location: "Wayne State University",
     type: "paper",
+  },
+  {
+    title: "Pathways from Childhood Victimization to Adolescent Dating Aggression: The Role of Caregiver Relationship Quality",
+    authors: "Munshi, I., Palmer C., Simon V.A.",
+    conference: "Society for Research in Child Development Biennial Meeting 2025",
+    year: "2025",
+    location: "Minneapolis, MN",
+    type: "poster",
+  },
+  {
+    title: "Parent-child relationship buffers the association between depressive symptoms and physically aggressive behavior in adolescents",
+    authors: "Munshi, I., & Goncy, E.A.",
+    conference: "Society for Research in Child Development Biennial Meeting 2025",
+    year: "2025",
+    location: "Minneapolis, MN",
+    type: "poster",
+  },
+
+  // 2024
+  {
+    title: "Young adults suggested interventions for different dating abuse scenarios",
+    authors: "Jiang, A., Welk, V.-J., Munshi, I., & Goncy, E. A.",
+    conference: "Resilience.con annual conference 2024",
+    year: "2024",
+    location: "Nashville, TN",
+    type: "poster",
+  },
+
+  // 2023
+  {
+    title: "FLAGS: Faculty Leaders Advancing Gender Equity",
+    authors: "Horvath, M. et. al.",
+    conference: "ADVANCE-ing Gender Equity Among STEM Professors Through I-O Psychology [symposium]. Society for Industrial and Organizational Psychology Annual Conference",
+    year: "2023",
+    location: "Boston, MA, United States",
+    type: "symposium",
   },
   {
     title: "Dating Sexual Perpetration & Alcohol Use Moderated by Child Sexual Abuse",
@@ -81,18 +109,44 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
+    title: "The relationship between the big five personality traits and beliefs about rape prevention",
+    authors: "Wheatley, G., Matthews, I. J. Munshi, I., & Goncy, E. A.",
+    conference: "Midwestern Psychological Association conference 2023",
+    year: "2023",
+    location: "Chicago, IL",
+    type: "poster",
+  },
+  {
+    title: "Childhood Cancer, Posttraumatic Stress Symptoms, and Contributing Factors",
+    authors: "Wheatley, G., Matthews, I. J. Munshi, I., & Goncy, E. A.",
+    conference: "Midwestern Psychological Association Conference 2023",
+    year: "2023",
+    location: "Chicago, IL",
+    type: "poster",
+  },
+  {
+    title: "Juvenile Transfer Evaluations: The Utility of the RSTI Treatment Amenability Scale",
+    authors: "Williams, L., Cook, S., Munshi, I., & Goncy, E.",
+    conference: "American Psychology-Law Society Conference 2023",
+    year: "2023",
+    location: "Philadelphia, PA",
+    type: "data-blitz",
+  },
+
+  // 2022
+  {
+    title: "Prior victimization and sexuality education among diverse young adults: Associations with dating sexual abuse victimization and perpetration",
+    authors: "Munshi, I., Goncy, E. A., Clonan-Roy, K., Fuller, K. A., & Naser, S.",
+    conference: "Exploring the risk factors for intimate partner violence in sexual and gender minority individuals [Symposium]. Association of Behavioral and Cognitive Therapy annual convention",
+    year: "2022",
+    location: "New York, NY, United States",
+    type: "symposium",
+  },
+  {
     title: "Are child sexual abuse and sexual related misdemeanor involvement related?",
     authors: "Munshi, I., & Goncy, E. A.",
     conference: "Midwestern Psychological Association conference 2022",
     year: "2022",
-    location: "Chicago, IL",
-    type: "paper",
-  },
-  {
-    title: "Associations between romantic satisfaction and dating abuse among dating couples",
-    authors: "Munshi, I., & Goncy, E. A.",
-    conference: "Midwestern Psychological Association conference 2021",
-    year: "2021",
     location: "Chicago, IL",
     type: "paper",
   },
@@ -110,6 +164,56 @@ const presentations: Presentation[] = [
     conference: "Society for Prevention Research conference 2022",
     year: "2022",
     location: "Seattle, WA",
+    type: "paper",
+  },
+  {
+    title: "Sexual trauma and self-efficacy for help-seeking in dating abuse",
+    authors: "Munshi, I., Wheatley, G., & Goncy, E. A.",
+    conference: "Association of Behavioral and Cognitive Therapy conference, 2022",
+    year: "2022",
+    location: "New York, NY",
+    type: "poster",
+  },
+  {
+    title: "Does Childhood Psychological or Physical Maltreatment by Mothers or Fathers Predict Subsequent Intimate Partner Violence in Romantic Relationships?",
+    authors: "Munshi, I. & Yaroslavsky I.",
+    conference: "Association of Behavioral and Cognitive Therapy conference, 2022",
+    year: "2022",
+    location: "New York, NY",
+    type: "poster",
+  },
+  {
+    title: "The Impact of Adverse Childhood Experiences on Assault",
+    authors: "Wheatley, G., Munshi, I., Goncy, E.A.",
+    conference: "American Society for Criminology conference 2022",
+    year: "2022",
+    location: "Atlanta, GA",
+    type: "poster",
+  },
+  {
+    title: "Parenting style and onset of adolescent cigarette, vapor, alcohol, and marijuana use",
+    authors: "Munshi, I., Letizio, H., Ishaq, J., Hutcherson, R., & Goncy, E. A.",
+    conference: "Society for Research on Adolescence conference, 2022",
+    year: "2022",
+    location: "Virtual",
+    type: "poster",
+  },
+  {
+    title: "Dating abuse among teens: Implications for mental health intervention",
+    authors: "Goncy, E. A., & Munshi, I.",
+    conference: "2022 Ohio Psychological Association",
+    year: "2022",
+    location: "Virtual",
+    type: "workshop",
+  },
+
+  // 2021
+  {
+    title: "Associations between romantic satisfaction and dating abuse among dating couples",
+    authors: "Munshi, I., & Goncy, E. A.",
+    conference: "Midwestern Psychological Association conference 2021",
+    year: "2021",
+    location: "Chicago, IL",
     type: "paper",
   },
   {
@@ -152,88 +256,6 @@ const presentations: Presentation[] = [
     location: "Virtual",
     type: "paper",
   },
-
-  // Conference Poster Presentations
-  {
-    title: "Disentangling Gender from Career Prioritization",
-    authors: "Horvath. M., Bracken, C. M., Munshi, I., Dong, L., & Goodell, J. E.",
-    conference: "Society for Industrial and Organizational Psychology Annual Conference",
-    year: "2026",
-    location: "New Orleans, LA, United States",
-    type: "poster",
-  },
-  {
-    title: "Pathways from Childhood Victimization to Adolescent Dating Aggression: The Role of Caregiver Relationship Quality",
-    authors: "Munshi, I., Palmer C., Simon V.A.",
-    conference: "Society for Research in Child Development Biennial Meeting 2025",
-    year: "2025",
-    location: "Minneapolis, MN",
-    type: "poster",
-  },
-  {
-    title: "Parent-child relationship buffers the association between depressive symptoms and physically aggressive behavior in adolescents",
-    authors: "Munshi, I., & Goncy, E.A.",
-    conference: "Society for Research in Child Development Biennial Meeting 2025",
-    year: "2025",
-    location: "Minneapolis, MN",
-    type: "poster",
-  },
-  {
-    title: "Young adults suggested interventions for different dating abuse scenarios",
-    authors: "Jiang, A., Welk, V.-J., Munshi, I., & Goncy, E. A.",
-    conference: "Resilience.con annual conference 2024",
-    year: "2024",
-    location: "Nashville, TN",
-    type: "poster",
-  },
-  {
-    title: "The relationship between the big five personality traits and beliefs about rape prevention",
-    authors: "Wheatley, G., Matthews, I. J. Munshi, I., & Goncy, E. A.",
-    conference: "Midwestern Psychological Association conference 2023",
-    year: "2023",
-    location: "Chicago, IL",
-    type: "poster",
-  },
-  {
-    title: "Childhood Cancer, Posttraumatic Stress Symptoms, and Contributing Factors",
-    authors: "Wheatley, G., Matthews, I. J. Munshi, I., & Goncy, E. A.",
-    conference: "Midwestern Psychological Association Conference 2023",
-    year: "2023",
-    location: "Chicago, IL",
-    type: "poster",
-  },
-  {
-    title: "Sexual trauma and self-efficacy for help-seeking in dating abuse",
-    authors: "Munshi, I., Wheatley, G., & Goncy, E. A.",
-    conference: "Association of Behavioral and Cognitive Therapy conference, 2022",
-    year: "2022",
-    location: "New York, NY",
-    type: "poster",
-  },
-  {
-    title: "Does Childhood Psychological or Physical Maltreatment by Mothers or Fathers Predict Subsequent Intimate Partner Violence in Romantic Relationships?",
-    authors: "Munshi, I. & Yaroslavsky I.",
-    conference: "Association of Behavioral and Cognitive Therapy conference, 2022",
-    year: "2022",
-    location: "New York, NY",
-    type: "poster",
-  },
-  {
-    title: "The Impact of Adverse Childhood Experiences on Assault",
-    authors: "Wheatley, G., Munshi, I., Goncy, E.A.",
-    conference: "American Society for Criminology conference 2022",
-    year: "2022",
-    location: "Atlanta, GA",
-    type: "poster",
-  },
-  {
-    title: "Parenting style and onset of adolescent cigarette, vapor, alcohol, and marijuana use",
-    authors: "Munshi, I., Letizio, H., Ishaq, J., Hutcherson, R., & Goncy, E. A.",
-    conference: "Society for Research on Adolescence conference, 2022",
-    year: "2022",
-    location: "Virtual",
-    type: "poster",
-  },
   {
     title: "Does depression and affect relate to dating abuse perpetration and victimization history among emerging adults?",
     authors: "Munshi, I., & Goncy, E. A.",
@@ -257,26 +279,6 @@ const presentations: Presentation[] = [
     year: "2021",
     location: "Virtual",
     type: "poster",
-  },
-
-  // Conference Professional Workshops
-  {
-    title: "Dating abuse among teens: Implications for mental health intervention",
-    authors: "Goncy, E. A., & Munshi, I.",
-    conference: "2022 Ohio Psychological Association",
-    year: "2022",
-    location: "Virtual",
-    type: "workshop",
-  },
-
-  // Conference Data Blitz
-  {
-    title: "Juvenile Transfer Evaluations: The Utility of the RSTI Treatment Amenability Scale",
-    authors: "Williams, L., Cook, S., Munshi, I., & Goncy, E.",
-    conference: "American Psychology-Law Society Conference 2023",
-    year: "2023",
-    location: "Philadelphia, PA",
-    type: "data-blitz",
   },
   {
     title: "Perspectives of emerging adult women on quality of school sexual education to prevent teen pregnancies and STIs",
