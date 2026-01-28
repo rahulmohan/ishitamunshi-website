@@ -6,9 +6,10 @@ import { useRef, useState, useEffect } from "react";
 const publications = [
   {
     authors: "Munshi, I., Basting, E. J., Reich, K., & Goncy, E. A.",
-    year: "In Press",
+    year: "2026",
     title: "Synergy effect of childhood maltreatment: When problematic alcohol use and impulsive emotional dysregulation predict dating aggression perpetration",
     journal: "Journal of Interpersonal Violence",
+    doi: "10.1177/08862605251414452",
     type: "journal",
   },
   {
