@@ -113,8 +113,8 @@ const photos = [
     alt: "Presenting at conference",
     caption: "First in-person conference, ASC, Chicago, 2021",
     rotate: 3,
-    size: "small",
-    position: { top: "52%", left: "2%" },
+    size: "large",
+    position: { top: "45%", left: "2%" },
     mobileOrder: 12,
   },
   {
@@ -122,8 +122,8 @@ const photos = [
     alt: "Presenting at MPA 2025",
     caption: "Presenting at MPA 2025",
     rotate: -2,
-    size: "medium",
-    position: { top: "54%", left: "22%" },
+    size: "small",
+    position: { top: "60%", left: "22%" },
     mobileOrder: 13,
   },
   {

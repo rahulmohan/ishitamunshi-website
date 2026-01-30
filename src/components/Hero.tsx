@@ -81,10 +81,10 @@ export default function Hero() {
           <div className="relative w-36 h-36 sm:w-72 sm:h-72 mx-auto rounded-full overflow-hidden border-2 border-[--accent]/20 shadow-xl">
             <div className="absolute inset-1 rounded-full overflow-hidden bg-white">
               <Image
-                src="/photos/WhatsApp Image 2026-01-30 at 13.12.44.jpeg"
+                src="/photos/WhatsApp Image 2026-01-30 at 13.53.16.jpeg"
                 alt="Ishita Munshi"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_80%] scale-[1.4]"
                 priority
               />
             </div>
