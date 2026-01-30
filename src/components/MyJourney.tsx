@@ -240,7 +240,7 @@ export default function MyJourney() {
             Moments & Memories
           </motion.span>
           <h2 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl lg:text-6xl font-light mb-6">
-            My <span className="font-medium gradient-text italic">Journey</span>
+            My <span className="font-medium gradient-text italic">Scrapbook</span>
           </h2>
           <p className="font-[family-name:var(--font-inter)] text-[--muted] text-sm max-w-xl mx-auto leading-relaxed">
             Snapshots from conferences, campus life, and city adventures
