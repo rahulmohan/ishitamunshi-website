@@ -7,6 +7,7 @@ import Publications from "@/components/Publications";
 import Presentations from "@/components/Presentations";
 import Teaching from "@/components/Teaching";
 import Awards from "@/components/Awards";
+import MyJourney from "@/components/MyJourney";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Research />
       <Teaching />
       <Awards />
+      <MyJourney />
       <Contact />
       <Footer />
     </main>
