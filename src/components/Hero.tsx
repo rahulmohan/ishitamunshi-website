@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -57,13 +58,48 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        {/* Decorative top line */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16 sm:pt-0">
+        {/* Profile Picture */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mb-4 sm:mb-8"
+        >
+          {/* Decorative ring */}
+          <motion.div
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-0 w-36 h-36 sm:w-48 sm:h-48 mx-auto rounded-full"
+            style={{
+              background: "conic-gradient(from 0deg, transparent 0%, var(--accent) 25%, transparent 50%, var(--accent) 75%, transparent 100%)",
+              opacity: 0.3,
+            }}
+          />
+          {/* Photo container */}
+          <div className="relative w-32 h-32 sm:w-44 sm:h-44 mx-auto rounded-full overflow-hidden border-2 border-[--accent]/20 shadow-xl">
+            <div className="absolute inset-1 rounded-full overflow-hidden bg-white">
+              <Image
+                src="/photos/ishitamunshi.jpeg"
+                alt="Ishita Munshi"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+          {/* Decorative dots - hidden on mobile */}
+          <div className="hidden sm:block absolute top-0 right-1/4 w-2 h-2 rounded-full bg-[--accent]/40" />
+          <div className="hidden sm:block absolute bottom-4 left-1/4 w-1.5 h-1.5 rounded-full bg-[--accent]/30" />
+        </motion.div>
+
+        {/* Decorative line */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[--accent] to-transparent mx-auto mb-8"
+          className="w-12 sm:w-16 h-[1px] bg-gradient-to-r from-transparent via-[--accent] to-transparent mx-auto mb-4 sm:mb-6"
         />
 
         {/* Subtitle */}
@@ -71,7 +107,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-[family-name:var(--font-inter)] text-xs tracking-[0.3em] uppercase text-[--muted] mb-6"
+          className="font-[family-name:var(--font-inter)] text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[--muted] mb-3 sm:mb-6"
         >
           Psychologist in the Making
         </motion.p>
@@ -81,10 +117,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="font-[family-name:var(--font-cormorant)] text-6xl sm:text-7xl md:text-8xl font-light tracking-tight mb-6"
+          className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-6xl md:text-7xl font-light tracking-tight mb-4 sm:mb-6"
         >
-          <span className="block">Ishita</span>
-          <span className="block gradient-text font-medium">Munshi</span>
+          Ishita <span className="gradient-text font-medium">Munshi</span>
         </motion.h1>
 
         {/* Description */}
@@ -92,7 +127,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="font-[family-name:var(--font-inter)] text-base sm:text-lg font-light text-[--muted] max-w-2xl mx-auto leading-relaxed mb-10"
+          className="font-[family-name:var(--font-inter)] text-sm sm:text-lg font-light text-[--muted] max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-10 px-2"
         >
           Ph.D. Candidate in Psychology at Wayne State University exploring
           dating relationships, with a focus on how technology—particularly
@@ -104,13 +139,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-row items-center justify-center gap-3 sm:gap-4"
         >
           <motion.a
             href="#research"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="group relative px-8 py-3 bg-[#1a1a1a] text-white font-[family-name:var(--font-inter)] text-sm tracking-wide overflow-hidden"
+            className="group relative px-5 sm:px-8 py-2.5 sm:py-3 bg-[#1a1a1a] text-white font-[family-name:var(--font-inter)] text-xs sm:text-sm tracking-wide overflow-hidden"
           >
             <span className="relative z-10">View Research</span>
             <motion.div
@@ -124,7 +159,7 @@ export default function Hero() {
             href="#contact"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-3 border border-[--border] text-[--foreground] font-[family-name:var(--font-inter)] text-sm tracking-wide hover:border-[--accent] hover:text-[--accent] transition-colors duration-300"
+            className="px-5 sm:px-8 py-2.5 sm:py-3 border border-[--border] text-[--foreground] font-[family-name:var(--font-inter)] text-xs sm:text-sm tracking-wide hover:border-[--accent] hover:text-[--accent] transition-colors duration-300"
           >
             Get in Touch
           </motion.a>
@@ -135,16 +170,16 @@ export default function Hero() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.2, delay: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[--accent] to-transparent mx-auto mt-16"
+          className="w-12 sm:w-16 h-[1px] bg-gradient-to-r from-transparent via-[--accent] to-transparent mx-auto mt-8 sm:mt-16"
         />
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - hidden on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="hidden sm:block absolute bottom-10 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
