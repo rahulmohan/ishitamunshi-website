@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 
 const photos = [
+  // Row 1
   {
     src: "/photos/graduation.jpg",
     alt: "Graduation celebration",
@@ -20,7 +21,7 @@ const photos = [
     caption: "NYC nights - ABCT 2022",
     rotate: 4,
     size: "medium",
-    position: { top: "5%", left: "55%" },
+    position: { top: "5%", left: "42%" },
     mobileOrder: 2,
   },
   {
@@ -29,17 +30,64 @@ const photos = [
     caption: "Excellent Achievement Award Day!",
     rotate: -2,
     size: "small",
-    position: { top: "2%", left: "85%" },
+    position: { top: "2%", left: "70%" },
     mobileOrder: 3,
   },
+  {
+    src: "/photos/exploring_minny_2025.JPG",
+    alt: "Exploring Minneapolis",
+    caption: "Exploring Minneapolis - SRCD 2025",
+    rotate: 3,
+    size: "medium",
+    position: { top: "10%", left: "85%" },
+    mobileOrder: 4,
+  },
+  // Row 2
   {
     src: "/photos/cleveland-sign.jpg",
     alt: "Cleveland Sign",
     caption: "First 10 days in the U.S.",
     rotate: 5,
     size: "medium",
-    position: { top: "35%", left: "0%" },
-    mobileOrder: 4,
+    position: { top: "18%", left: "0%" },
+    mobileOrder: 5,
+  },
+  {
+    src: "/photos/presenting_mpa.JPG",
+    alt: "Presenting at MPA",
+    caption: "Presenting at MPA Conference",
+    rotate: -3,
+    size: "medium",
+    position: { top: "20%", left: "28%" },
+    mobileOrder: 6,
+  },
+  {
+    src: "/photos/csu-campus.jpg",
+    alt: "Cleveland State University",
+    caption: "First day of classes in the U.S.",
+    rotate: 2,
+    size: "small",
+    position: { top: "17%", left: "58%" },
+    mobileOrder: 7,
+  },
+  {
+    src: "/photos/chicago.jpg",
+    alt: "Chicago",
+    caption: "Exploring Chi-town during MPA 2021",
+    rotate: -4,
+    size: "large",
+    position: { top: "26%", left: "75%" },
+    mobileOrder: 8,
+  },
+  // Row 3
+    {
+    src: "/photos/chicago_views_mpa_2025.JPG",
+    alt: "Chicago views MPA 2025",
+    caption: "Chicago views - MPA 2025",
+    rotate: -5,
+    size: "small",
+    position: { top: "34%", left: "5%" },
+    mobileOrder: 9,
   },
   {
     src: "/photos/conference-poster-1.jpg",
@@ -47,53 +95,73 @@ const photos = [
     caption: "ABCT 2022, NYC",
     rotate: -4,
     size: "small",
-    position: { top: "40%", left: "32%" },
-    mobileOrder: 5,
+    position: { top: "36%", left: "32%" },
+    mobileOrder: 10,
   },
   {
-    src: "/photos/csu-campus.jpg",
-    alt: "Cleveland State University",
-    caption: "First day of classes in the U.S.",
-    rotate: 2,
+    src: "/photos/presenting_mpa_2023.JPG",
+    alt: "Full room at MPA",
+    caption: "Full house at MPA 2023!",
+    rotate: 3,
     size: "medium",
-    position: { top: "32%", left: "58%" },
-    mobileOrder: 6,
+    position: { top: "33%", left: "52%" },
+    mobileOrder: 11,
   },
-  {
-    src: "/photos/chicago.jpg",
-    alt: "Chicago",
-    caption: "Exploring Chi-town during MPA 2021",
-    rotate: -5,
-    size: "large",
-    position: { top: "38%", left: "78%" },
-    mobileOrder: 7,
-  },
+  // Row 4
   {
     src: "/photos/presenting.jpg",
     alt: "Presenting at conference",
     caption: "First in-person conference, Chicago, IL",
     rotate: 3,
     size: "small",
-    position: { top: "65%", left: "8%" },
-    mobileOrder: 8,
+    position: { top: "52%", left: "2%" },
+    mobileOrder: 12,
   },
   {
-    src: "/photos/conference-poster-2.jpg",
-    alt: "Research poster presentation",
-    caption: "ABCT 2022, NYC",
-    rotate: -3,
+    src: "/photos/presenting_mpa_2025.jpg",
+    alt: "Presenting at MPA 2025",
+    caption: "Presenting at MPA 2025",
+    rotate: -2,
     size: "medium",
-    position: { top: "68%", left: "35%" },
-    mobileOrder: 9,
+    position: { top: "54%", left: "22%" },
+    mobileOrder: 13,
   },
+  {
+    src: "/photos/outstanding_grad_student_award_clinical_psych_with_drGoncy.jpg",
+    alt: "Outstanding Graduate Student Award with Dr. Goncy <3",
+    caption: "Outstanding Graduation Student Award - with Dr. Goncy 💚",
+    rotate: 2,
+    size: "large",
+    position: { top: "50%", left: "45%" },
+    mobileOrder: 14,
+  },
+  {
+    src: "/photos/presenting_srcd_2025.JPG",
+    alt: "SRCD 2025 Poster",
+    caption: "Poster session at SRCD 2025",
+    rotate: -2,
+    size: "large",
+    position: { top: "48%", left: "72%" },
+    mobileOrder: 15,
+  },
+  // Row 5
   {
     src: "/photos/wayne-state.jpg",
     alt: "Wayne State University",
     caption: "Starting PhD at Wayne State",
-    rotate: 4,
+    rotate: -3,
     size: "medium",
-    position: { top: "72%", left: "65%" },
-    mobileOrder: 10,
+    position: { top: "70%", left: "5%" },
+    mobileOrder: 16,
+  },
+  {
+    src: "/photos/presenting_srcd_2025_minny.JPG",
+    alt: "SRCD Minneapolis",
+    caption: "SRCD 2025, Minneapolis",
+    rotate: 5,
+    size: "medium",
+    position: { top: "72%", left: "35%" },
+    mobileOrder: 17,
   },
   {
     src: "/photos/psychology-dept.jpg",
@@ -101,8 +169,27 @@ const photos = [
     caption: "CSU Psychology Department",
     rotate: -2,
     size: "small",
-    position: { top: "70%", left: "88%" },
-    mobileOrder: 11,
+    position: { top: "74%", left: "65%" },
+    mobileOrder: 18,
+  },
+  {
+    src: "/photos/conference-poster-2.jpg",
+    alt: "Research poster presentation",
+    caption: "ABCT 2022, NYC",
+    rotate: -3,
+    size: "small",
+    position: { top: "73%", left: "85%" },
+    mobileOrder: 19,
+  },
+  {
+    src: "/photos/undergrad_delhi.JPG",
+    alt: "Undergrad in New Delhi",
+    caption: "First day out in undergrad, New Delhi, India, 2017",
+    rotate: 2,
+    size: "large",
+    position: { top: "86%", left: "40%" },
+    mobileOrder: 20,
+    objectPosition: "top",
   },
 ];
 
@@ -127,15 +214,6 @@ export default function MyJourney() {
         }}
       />
 
-      {/* Decorative elements */}
-      <div className="absolute top-32 left-20 w-24 h-24 border-2 border-[--accent]/10 rounded-full" />
-      <div className="absolute top-64 right-32 w-16 h-16 border border-[--accent]/20 rotate-45" />
-      <div className="absolute bottom-48 left-1/4 w-32 h-32 border border-[--accent]/10 rounded-full" />
-
-      {/* Decorative tape strips */}
-      <div className="absolute top-40 right-20 w-20 h-6 bg-[--accent]/10 rotate-45 hidden md:block" />
-      <div className="absolute bottom-60 left-16 w-16 h-5 bg-[--accent-light]/15 -rotate-12 hidden md:block" />
-
       <div className="max-w-7xl mx-auto px-6 relative" ref={ref}>
         {/* Header */}
         <motion.div
@@ -158,10 +236,39 @@ export default function MyJourney() {
           <p className="font-[family-name:var(--font-inter)] text-[--muted] text-sm max-w-xl mx-auto leading-relaxed">
             Snapshots from conferences, campus life, and city adventures
           </p>
+
+          {/* Fun Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-8 flex flex-wrap justify-center gap-8 md:gap-16"
+          >
+            {[
+              { number: "2", label: "Continents" },
+              { number: "3", label: "Universities" },
+              { number: "∞", label: "Memories" },
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                className="text-center"
+              >
+                <span className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl font-light gradient-text">
+                  {stat.number}
+                </span>
+                <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-1 tracking-widest uppercase">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Collage Container - Desktop */}
-        <div className="hidden md:block relative h-[1100px]">
+        <div className="hidden md:block relative h-[2100px]">
           {photos.map((photo, index) => (
             <motion.div
               key={photo.src}
@@ -202,6 +309,7 @@ export default function MyJourney() {
                     alt={photo.alt}
                     fill
                     className="object-cover"
+                    style={{ objectPosition: photo.objectPosition || "center" }}
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </div>
@@ -229,7 +337,7 @@ export default function MyJourney() {
         </div>
 
         {/* Mobile Grid Layout */}
-        <div className="md:hidden grid grid-cols-2 gap-4">
+        <div className="md:hidden grid grid-cols-2 gap-3">
           {[...photos]
             .sort((a, b) => a.mobileOrder - b.mobileOrder)
             .map((photo, index) => (
@@ -240,19 +348,19 @@ export default function MyJourney() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="cursor-pointer"
               onClick={() => setSelectedPhoto(photo)}
-              style={{ rotate: `${photo.rotate}deg` }}
             >
-              <div className="relative bg-white p-2 pb-7 shadow-md">
+              <div className="relative bg-white p-1.5 shadow-md">
                 <div className="relative aspect-[3/4] overflow-hidden bg-gray-100">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
                     fill
                     className="object-cover"
+                    style={{ objectPosition: photo.objectPosition || "center" }}
                     sizes="50vw"
                   />
                 </div>
-                <p className="absolute bottom-1 left-0 right-0 text-center font-[family-name:var(--font-cormorant)] text-base text-[--foreground]/80 italic">
+                <p className="mt-1.5 pb-1 px-1 text-center font-[family-name:var(--font-cormorant)] text-sm text-[--foreground]/80 italic leading-tight">
                   {photo.caption}
                 </p>
               </div>
@@ -260,46 +368,6 @@ export default function MyJourney() {
           ))}
         </div>
 
-        {/* Decorative quote */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 1, delay: 1 }}
-          className="text-center mt-16 md:mt-8"
-        >
-          <p className="font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl font-light text-[--muted]/60 italic">
-            &ldquo;Collect moments, not things&rdquo;
-          </p>
-        </motion.div>
-
-        {/* Fun Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 md:gap-16"
-        >
-          {[
-            { number: "2", label: "Continents" },
-            { number: "3", label: "Universities" },
-            { number: "∞", label: "Memories" },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
-              className="text-center"
-            >
-              <span className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl font-light gradient-text">
-                {stat.number}
-              </span>
-              <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-1 tracking-widest uppercase">
-                {stat.label}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
 
       {/* Lightbox Modal */}
