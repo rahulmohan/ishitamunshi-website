@@ -9,7 +9,7 @@ const photos = [
   {
     src: "/photos/graduation.jpg",
     alt: "Graduation celebration",
-    caption: "MA Clinical Psychology - Graduation Day",
+    caption: "MA Clinical Psychology - Graduation Day, 2023",
     rotate: -3,
     size: "large",
     position: { top: "0%", left: "5%" },
@@ -46,7 +46,7 @@ const photos = [
   {
     src: "/photos/cleveland-sign.jpg",
     alt: "Cleveland Sign",
-    caption: "First 10 days in the U.S.",
+    caption: "First 10 days in the U.S, 2021",
     rotate: 5,
     size: "medium",
     position: { top: "18%", left: "0%" },
