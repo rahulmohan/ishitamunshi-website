@@ -73,7 +73,7 @@ const photos = [
   {
     src: "/photos/chicago.jpg",
     alt: "Chicago",
-    caption: "Exploring Chi-town during MPA 2021",
+    caption: "Exploring Chi-town during APS 2021",
     rotate: -4,
     size: "large",
     position: { top: "26%", left: "75%" },
@@ -111,7 +111,7 @@ const photos = [
   {
     src: "/photos/presenting.jpg",
     alt: "Presenting at conference",
-    caption: "First in-person conference, Chicago, IL",
+    caption: "First in-person conference, ASC, Chicago, 2021",
     rotate: 3,
     size: "small",
     position: { top: "52%", left: "2%" },
@@ -129,7 +129,7 @@ const photos = [
   {
     src: "/photos/outstanding_grad_student_award_clinical_psych_with_drGoncy.JPG",
     alt: "Outstanding Graduate Student Award with Dr. Goncy <3",
-    caption: "Outstanding Graduation Student Award - with Dr. Goncy 💚",
+    caption: "Outstanding Graduate Student Award - with Dr. Goncy 💚",
     rotate: 2,
     size: "large",
     position: { top: "50%", left: "45%" },
@@ -148,7 +148,7 @@ const photos = [
   {
     src: "/photos/wayne-state.jpg",
     alt: "Wayne State University",
-    caption: "Starting PhD at Wayne State",
+    caption: "Starting PhD at Wayne State University, 2023",
     rotate: -3,
     size: "medium",
     position: { top: "70%", left: "5%" },
@@ -166,7 +166,7 @@ const photos = [
   {
     src: "/photos/psychology-dept.jpg",
     alt: "Psychology Department",
-    caption: "CSU Psychology Department",
+    caption: "Cleveland State University Psychology Department",
     rotate: -2,
     size: "small",
     position: { top: "74%", left: "65%" },
