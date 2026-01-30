@@ -191,6 +191,15 @@ const photos = [
     mobileOrder: 20,
     objectPosition: "top",
   },
+  {
+    src: "/photos/prom_queen_2017.JPG",
+    alt: "Prom Queen 2017",
+    caption: "Prom Queen, High School, 2017",
+    rotate: -2,
+    size: "large",
+    position: { top: "86%", left: "65%" },
+    mobileOrder: 21,
+  },
 ];
 
 const sizeClasses = {
