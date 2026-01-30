@@ -127,7 +127,7 @@ const photos = [
     mobileOrder: 13,
   },
   {
-    src: "/photos/outstanding_grad_student_award_clinical_psych_with_drGoncy.jpg",
+    src: "/photos/outstanding_grad_student_award_clinical_psych_with_drGoncy.JPG",
     alt: "Outstanding Graduate Student Award with Dr. Goncy <3",
     caption: "Outstanding Graduation Student Award - with Dr. Goncy 💚",
     rotate: 2,
