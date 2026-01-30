@@ -58,7 +58,7 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16 sm:pt-0">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24 sm:pt-20">
         {/* Profile Picture */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -71,17 +71,17 @@ export default function Hero() {
             initial={{ rotate: 0 }}
             animate={{ rotate: 360 }}
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 w-36 h-36 sm:w-48 sm:h-48 mx-auto rounded-full"
+            className="absolute inset-0 w-40 h-40 sm:w-80 sm:h-80 mx-auto rounded-full"
             style={{
               background: "conic-gradient(from 0deg, transparent 0%, var(--accent) 25%, transparent 50%, var(--accent) 75%, transparent 100%)",
               opacity: 0.3,
             }}
           />
           {/* Photo container */}
-          <div className="relative w-32 h-32 sm:w-44 sm:h-44 mx-auto rounded-full overflow-hidden border-2 border-[--accent]/20 shadow-xl">
+          <div className="relative w-36 h-36 sm:w-72 sm:h-72 mx-auto rounded-full overflow-hidden border-2 border-[--accent]/20 shadow-xl">
             <div className="absolute inset-1 rounded-full overflow-hidden bg-white">
               <Image
-                src="/photos/ishitamunshi.jpeg"
+                src="/photos/WhatsApp Image 2026-01-30 at 13.12.44.jpeg"
                 alt="Ishita Munshi"
                 fill
                 className="object-cover"
@@ -127,7 +127,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="font-[family-name:var(--font-inter)] text-sm sm:text-lg font-light text-[--muted] max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-10 px-2"
+          className="font-[family-name:var(--font-inter)] text-xs sm:text-sm font-light text-[--muted] max-w-lg mx-auto leading-relaxed mb-6 sm:mb-8 px-4"
         >
           Ph.D. Candidate in Psychology at Wayne State University exploring
           dating relationships, with a focus on how technology—particularly
@@ -174,24 +174,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Scroll indicator - hidden on mobile */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="hidden sm:block absolute bottom-10 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-2"
-        >
-          <span className="font-[family-name:var(--font-inter)] text-[10px] tracking-[0.2em] uppercase text-[--muted]">
-            Scroll
-          </span>
-          <div className="w-[1px] h-8 bg-gradient-to-b from-[--accent] to-transparent" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
