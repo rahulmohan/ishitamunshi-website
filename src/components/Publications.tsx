@@ -149,7 +149,7 @@ export default function Publications() {
             className="text-center p-4 sm:p-6 border border-[--border] hover:border-[--accent] transition-colors duration-300 min-w-[150px]"
           >
             <span className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-light gradient-text">
-              <CountUp value={19} isInView={isInView} />+
+              <CountUp value={20} isInView={isInView} />+
             </span>
             <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] mt-2 tracking-wide">
               Citations
