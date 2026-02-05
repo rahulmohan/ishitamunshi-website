@@ -58,7 +58,7 @@ const photos = [
     caption: "Presenting at MPA Conference",
     rotate: -3,
     size: "medium",
-    position: { top: "20%", left: "28%" },
+    position: { top: "70%", left: "5%" },
     mobileOrder: 6,
   },
   {
@@ -151,7 +151,7 @@ const photos = [
     caption: "Starting PhD at Wayne State University, 2023",
     rotate: -3,
     size: "medium",
-    position: { top: "70%", left: "5%" },
+    position: { top: "20%", left: "28%" },
     mobileOrder: 16,
   },
   {
