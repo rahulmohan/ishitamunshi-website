@@ -126,22 +126,27 @@ export default function About() {
           >
             <div className="space-y-6 font-[family-name:var(--font-inter)] text-[--muted] font-light leading-relaxed">
               <p>
-                I am a doctoral candidate in Psychology at Wayne State University,
-                where my research focuses on understanding the complex pathways through which
-                early life experiences shape adolescent relationship dynamics. I have obtained
-                interdisciplinary training in developmental, clinical, and quantitative psychology.
+                I'm a doctoral candidate in Psychology at Wayne State University
+                investigating how early life experiences shape the way people love,
+                connect, and form relationships. Trained in developmental, clinical,
+                and quantitative psychology, my work sits at the intersection of
+                theory, data, and lived community experience.
               </p>
               <p>
-                My work integrates perspectives from developmental psychology, clinical science,
-                and quantitative methodology to examine how childhood adversity influences
-                dating relationship patterns, with particular attention to violence prevention
-                and healthy relationship development. I am also interested in understanding how
-                artificial intelligence impacts human development and behavior.
+                As a Pre-Doctoral Fellow at the Merrill Palmer Skillman Institute, I
+                engage in interdisciplinary research and community outreach,
+                translating science into tools that support youth and families.
               </p>
               <p>
-                As a Pre-Doctoral Fellow at the Merrill Palmer Skillman Institute, I engage in
-                interdisciplinary research and community outreach, translating scientific
-                findings into actionable insights for youth and families.
+                My work examines how technology has transformed modern
+                relationships—sometimes fostering closeness, sometimes fueling harm.
+                As artificial intelligence (AI) becomes woven into everyday life, my
+                current research pushes this question further: What happens when
+                technology not merely mediates relationships, but becomes a relational
+                partner itself? Rather than asking how people fall in love through
+                technology, I ask what it means to fall in love with technology—such
+                as an AI girlfriend—and how these relationships shape users' romantic
+                competence, intimacy, and functioning in human relationships.
               </p>
             </div>
 
@@ -239,7 +244,7 @@ export default function About() {
             >
               {[
                 { number: "6+", label: "Publications" },
-                { number: "19+", label: "Citations" },
+                { number: "20+", label: "Citations" },
                 { number: "37+", label: "Presentations" },
                 { number: "750+", label: "Clinical Hours" },
               ].map((stat) => (
