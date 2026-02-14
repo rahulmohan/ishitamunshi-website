@@ -5,6 +5,14 @@ import { useRef, useState, useEffect } from "react";
 
 const awards = [
   {
+    title: "Pre-Doctoral Rumble Fellowship Award",
+    source: "Wayne State University",
+    year: "2026–2027",
+    amount: "$20,000 + Tuition",
+    description: "Prestigious university fellowship supporting Ph.D. students with a $20,000 stipend and tuition scholarship to optimize performance at each stage of doctoral training.",
+    type: "fellowship",
+  },
+  {
     title: "Pre-Doctoral Fellowship",
     source: "Merrill Palmer Skillman Institute",
     year: "2025",
@@ -145,7 +153,7 @@ export default function Awards() {
           className="text-center mb-16"
         >
           <span className="font-[family-name:var(--font-cormorant)] text-6xl sm:text-7xl font-light gradient-text">
-            <CountUpDollar value={16000} isInView={isInView} />
+            <CountUpDollar value={36000} isInView={isInView} />
           </span>
           <p className="font-[family-name:var(--font-inter)] text-sm text-[--muted] mt-4 tracking-wide">
             Total Research Funding & Awards

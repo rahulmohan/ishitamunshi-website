@@ -380,17 +380,17 @@ export default function Presentations() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto"
+          className="grid grid-cols-3 gap-3 sm:gap-6 mb-12 max-w-2xl mx-auto"
         >
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 bg-white border border-[--border] rounded-sm"
+              className="text-center p-3 sm:p-6 bg-white border border-[--border] rounded-sm"
             >
-              <div className="font-[family-name:var(--font-cormorant)] text-4xl font-light text-[--accent] mb-2">
+              <div className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-light text-[--accent] mb-2">
                 <CountUp value={stat.value} isInView={isInView} />
               </div>
-              <div className="font-[family-name:var(--font-inter)] text-xs tracking-wider uppercase text-[--muted]">
+              <div className="font-[family-name:var(--font-inter)] text-[10px] sm:text-xs tracking-wider uppercase text-[--muted]">
                 {stat.label}
               </div>
             </div>
