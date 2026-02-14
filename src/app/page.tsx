@@ -20,9 +20,9 @@ export default function Home() {
       <About />
       <Publications />
       <Presentations />
+      <Awards />
       <Research />
       <Teaching />
-      <Awards />
       <MyJourney />
       <Contact />
       <Footer />

@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { name: "About", href: "#about" },
-  { name: "Research", href: "#research" },
   { name: "Publications", href: "#publications" },
   { name: "Presentations", href: "#presentations" },
-  { name: "Teaching", href: "#teaching" },
   { name: "Awards", href: "#awards" },
+  { name: "Research", href: "#research" },
+  { name: "Teaching", href: "#teaching" },
   { name: "My Journey", href: "#journey" },
   { name: "Contact", href: "#contact" },
 ];
