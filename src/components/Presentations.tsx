@@ -15,6 +15,14 @@ interface Presentation {
 const presentations: Presentation[] = [
   // 2026
   {
+    title: "Psychometric Properties of the Conflict in Dating Relationships Inventory (Short-Form) Among Lesbian, Gay, and Bisexual Young Adults",
+    authors: "Munshi, I., Palmer, C., Simon, V. A.",
+    conference: "Association for Psychological Science",
+    year: "2026",
+    location: "Barcelona, Spain",
+    type: "poster",
+  },
+  {
     title: "Disentangling Gender from Career Prioritization",
     authors: "Horvath. M., Bracken, C. M., Munshi, I., Dong, L., & Goodell, J. E.",
     conference: "Society for Industrial and Organizational Psychology Annual Conference",
@@ -148,22 +156,6 @@ const presentations: Presentation[] = [
     conference: "Midwestern Psychological Association conference 2022",
     year: "2022",
     location: "Chicago, IL",
-    type: "paper",
-  },
-  {
-    title: "Perceptions of trauma severity following rape relate to fewer rape myth",
-    authors: "Munshi, I., Wheatley, G. & Goncy, E. A.",
-    conference: "Society for Prevention Research conference 2022",
-    year: "2022",
-    location: "Seattle, WA",
-    type: "paper",
-  },
-  {
-    title: "Associations of family structure with age of onset, lifetime, and recent substance use among emerging adults",
-    authors: "Munshi, I., Letizio, H., & Goncy, E. A.",
-    conference: "Society for Prevention Research conference 2022",
-    year: "2022",
-    location: "Seattle, WA",
     type: "paper",
   },
   {
@@ -320,8 +312,8 @@ function CountUp({ value, isInView }: { value: number; isInView: boolean }) {
 }
 
 const stats = [
-  { label: "Paper Presentations", value: 18 },
-  { label: "Poster Presentations", value: 14 },
+  { label: "Paper Presentations", value: 16 },
+  { label: "Poster Presentations", value: 15 },
   { label: "Symposia", value: 2 },
 ];
 
