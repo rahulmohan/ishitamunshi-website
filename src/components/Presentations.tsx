@@ -57,7 +57,7 @@ const presentations: Presentation[] = [
     type: "poster",
   },
   {
-    title: "Parent-child relationship buffers the association between depressive symptoms and physically aggressive behavior in adolescents",
+    title: "Parent-Child Relationship Buffers the Association Between Depressive Symptoms and Physically Aggressive Behavior in Adolescents",
     authors: "Munshi, I., & Goncy, E.A.",
     conference: "Society for Research in Child Development Biennial Meeting 2025",
     year: "2025",
@@ -67,7 +67,7 @@ const presentations: Presentation[] = [
 
   // 2024
   {
-    title: "Young adults suggested interventions for different dating abuse scenarios",
+    title: "Young Adults Suggested Interventions for Different Dating Abuse Scenarios",
     authors: "Jiang, A., Welk, V.-J., Munshi, I., & Goncy, E. A.",
     conference: "Resilience.con annual conference 2024",
     year: "2024",
@@ -117,7 +117,7 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
-    title: "The relationship between the big five personality traits and beliefs about rape prevention",
+    title: "The Relationship Between the Big Five Personality Traits and Beliefs About Rape Prevention",
     authors: "Wheatley, G., Matthews, I. J. Munshi, I., & Goncy, E. A.",
     conference: "Midwestern Psychological Association conference 2023",
     year: "2023",
@@ -143,7 +143,7 @@ const presentations: Presentation[] = [
 
   // 2022
   {
-    title: "Prior victimization and sexuality education among diverse young adults: Associations with dating sexual abuse victimization and perpetration",
+    title: "Prior Victimization and Sexuality Education Among Diverse Young Adults: Associations with Dating Sexual Abuse Victimization and Perpetration",
     authors: "Munshi, I., Goncy, E. A., Clonan-Roy, K., Fuller, K. A., & Naser, S.",
     conference: "Exploring the risk factors for intimate partner violence in sexual and gender minority individuals [Symposium]. Association of Behavioral and Cognitive Therapy annual convention",
     year: "2022",
@@ -151,7 +151,7 @@ const presentations: Presentation[] = [
     type: "symposium",
   },
   {
-    title: "Are child sexual abuse and sexual related misdemeanor involvement related?",
+    title: "Are Child Sexual Abuse and Sexual Related Misdemeanor Involvement Related?",
     authors: "Munshi, I., & Goncy, E. A.",
     conference: "Midwestern Psychological Association conference 2022",
     year: "2022",
@@ -159,7 +159,7 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
-    title: "Sexual trauma and self-efficacy for help-seeking in dating abuse",
+    title: "Sexual Trauma and Self-Efficacy for Help-Seeking in Dating Abuse",
     authors: "Munshi, I., Wheatley, G., & Goncy, E. A.",
     conference: "Association of Behavioral and Cognitive Therapy conference, 2022",
     year: "2022",
@@ -183,7 +183,7 @@ const presentations: Presentation[] = [
     type: "poster",
   },
   {
-    title: "Parenting style and onset of adolescent cigarette, vapor, alcohol, and marijuana use",
+    title: "Parenting Style and Onset of Adolescent Cigarette, Vapor, Alcohol, and Marijuana Use",
     authors: "Munshi, I., Letizio, H., Ishaq, J., Hutcherson, R., & Goncy, E. A.",
     conference: "Society for Research on Adolescence conference, 2022",
     year: "2022",
@@ -191,7 +191,7 @@ const presentations: Presentation[] = [
     type: "poster",
   },
   {
-    title: "Dating abuse among teens: Implications for mental health intervention",
+    title: "Dating Abuse Among Teens: Implications for Mental Health Intervention",
     authors: "Goncy, E. A., & Munshi, I.",
     conference: "2022 Ohio Psychological Association",
     year: "2022",
@@ -201,7 +201,7 @@ const presentations: Presentation[] = [
 
   // 2021
   {
-    title: "Associations between romantic satisfaction and dating abuse among dating couples",
+    title: "Associations Between Romantic Satisfaction and Dating Abuse Among Dating Couples",
     authors: "Munshi, I., & Goncy, E. A.",
     conference: "Midwestern Psychological Association conference 2021",
     year: "2021",
@@ -209,7 +209,7 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
-    title: "Trauma symptoms and dating abuse perpetration and victimization: Examination of gender, sexual orientation, and race as moderators among emerging adults",
+    title: "Trauma Symptoms and Dating Abuse Perpetration and Victimization: Examination of Gender, Sexual Orientation, and Race as Moderators Among Emerging Adults",
     authors: "Munshi, I., & Goncy, E. A.",
     conference: "Society for the Study of Emerging Adulthood conference 2021",
     year: "2021",
@@ -217,7 +217,7 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
-    title: "Associations of physical and sexual assault on subsequent young adult dating abuse",
+    title: "Associations of Physical and Sexual Assault on Subsequent Young Adult Dating Abuse",
     authors: "Munshi, I., & Goncy, E. A.",
     conference: "American Society of Criminology conference 2021",
     year: "2021",
@@ -225,7 +225,7 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
-    title: "Influence of parental attachment on teen sexual education received from family",
+    title: "Influence of Parental Attachment on Teen Sexual Education Received from Family",
     authors: "Ishaq, J., Liebhardt, B., Munshi, I., & Goncy, E. A.",
     conference: "Midwestern Psychological Association conference 2021",
     year: "2021",
@@ -233,7 +233,7 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
-    title: "Is social media jealousy in romantic relationships related to depression?",
+    title: "Is Social Media Jealousy in Romantic Relationships Related to Depression?",
     authors: "Munshi, I., & Goncy, E. A.",
     conference: "Midwestern Psychological Association annual conference 2021",
     year: "2021",
@@ -241,7 +241,7 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
-    title: "Does maternal or paternal attachment improve teen access to contraceptives?",
+    title: "Does Maternal or Paternal Attachment Improve Teen Access to Contraceptives?",
     authors: "Munshi, I., Ishaq, J., Liebhardt, B., & Goncy, E. A.",
     conference: "Midwestern Psychological Association annual conference 2021",
     year: "2021",
@@ -249,7 +249,7 @@ const presentations: Presentation[] = [
     type: "paper",
   },
   {
-    title: "Does depression and affect relate to dating abuse perpetration and victimization history among emerging adults?",
+    title: "Does Depression and Affect Relate to Dating Abuse Perpetration and Victimization History Among Emerging Adults?",
     authors: "Munshi, I., & Goncy, E. A.",
     conference: "Society for the Study of Emerging Adulthood conference, 2021",
     year: "2021",
@@ -257,7 +257,7 @@ const presentations: Presentation[] = [
     type: "poster",
   },
   {
-    title: "Gender, attachment, and romantic relationship satisfaction: Testing novel methodology",
+    title: "Gender, Attachment, and Romantic Relationship Satisfaction: Testing Novel Methodology",
     authors: "Munshi, I., Cowan, J., & Goncy, E. A.",
     conference: "American Psychological Association conference, 2021",
     year: "2021",
@@ -265,7 +265,7 @@ const presentations: Presentation[] = [
     type: "poster",
   },
   {
-    title: "Do self-blaming and catastrophizing associate with dating abuse victimization and perpetration in dating young adults?",
+    title: "Do Self-Blaming and Catastrophizing Associate with Dating Abuse Victimization and Perpetration in Dating Young Adults?",
     authors: "Munshi, I., & Goncy, E. A.",
     conference: "British Psychological Society Division of Counselling Psychology conference, 2021",
     year: "2021",
@@ -273,7 +273,7 @@ const presentations: Presentation[] = [
     type: "poster",
   },
   {
-    title: "Perspectives of emerging adult women on quality of school sexual education to prevent teen pregnancies and STIs",
+    title: "Perspectives of Emerging Adult Women on Quality of School Sexual Education to Prevent Teen Pregnancies and STIs",
     authors: "Liebhardt, B., Munshi, I., Ishaq, J., & Goncy, E. A.",
     conference: "Society for the Study of Emerging Adulthood annual conference, 2021",
     year: "2021",
