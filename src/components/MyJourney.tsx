@@ -200,6 +200,15 @@ const photos = [
     position: { top: "86%", left: "65%" },
     mobileOrder: 21,
   },
+  {
+    src: "/photos/with_dr_simon_award_2026.jpg",
+    alt: "With Dr. Valerie Simon receiving Graduate Student Research Presentation Award",
+    caption: "Research Presentation Award with Dr. Simon, 2026",
+    rotate: -3,
+    size: "medium",
+    position: { top: "86%", left: "12%" },
+    mobileOrder: 22,
+  },
 ];
 
 const sizeClasses = {
@@ -277,7 +286,7 @@ export default function MyJourney() {
         </motion.div>
 
         {/* Collage Container - Desktop */}
-        <div className="hidden md:block relative h-[2100px]">
+        <div className="hidden md:block relative h-[2200px]">
           {photos.map((photo, index) => (
             <motion.div
               key={photo.src}

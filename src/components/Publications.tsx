@@ -5,6 +5,13 @@ import { useRef, useState, useEffect } from "react";
 
 const publications = [
   {
+    authors: "Munshi, I.",
+    year: "in press",
+    title: "No one taught us about sex, so the internet did: Silence, shame, and informal sexual health communication in South Asia",
+    journal: "In G. Bamezai, P. Sopory, & U. Dutta (Eds.), Handbook of communication in South Asia: Voices from academia and beyond. Routledge",
+    type: "chapter",
+  },
+  {
     authors: "Munshi, I., Basting, E. J., Reich, K., & Goncy, E. A.",
     year: "2026",
     title: "Synergy effect of childhood maltreatment: When problematic alcohol use and impulsive emotional dysregulation predict dating aggression perpetration",

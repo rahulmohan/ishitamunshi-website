@@ -15,10 +15,18 @@ const awards = [
   {
     title: "Pre-Doctoral Fellowship",
     source: "Merrill Palmer Skillman Institute",
-    year: "2025",
-    amount: "$3,000",
+    year: "2025–2027",
+    amount: "$6,000",
     description: "Competitive fellowship emphasizing interdisciplinary research, advanced training, and community outreach in psychology.",
     type: "fellowship",
+  },
+  {
+    title: "Graduate Student Research Presentation Award",
+    source: "Wayne State University, Department of Psychology",
+    year: "2026",
+    amount: "$100",
+    description: "Recognition for excellence in graduate student research communication.",
+    type: "honor",
   },
   {
     title: "NSF Sponsored Research Assistantship",
@@ -153,7 +161,7 @@ export default function Awards() {
           className="text-center mb-16"
         >
           <span className="font-[family-name:var(--font-cormorant)] text-6xl sm:text-7xl font-light gradient-text">
-            <CountUpDollar value={36000} isInView={isInView} />
+            <CountUpDollar value={39000} isInView={isInView} />
           </span>
           <p className="font-[family-name:var(--font-inter)] text-sm text-[--muted] mt-4 tracking-wide">
             Total Research Funding & Awards

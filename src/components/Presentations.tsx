@@ -15,6 +15,30 @@ interface Presentation {
 const presentations: Presentation[] = [
   // 2026
   {
+    title: "Violence Spills Over: A Four-Wave Cross-Lagged Analysis of Interpersonal Violence Exposure and Dating Aggression",
+    authors: "Munshi, I., & Simon, V.A.",
+    conference: "Lifespan Alliance Day, Merrill Palmer Skillman Institute, Wayne State University",
+    year: "2026",
+    location: "Detroit, MI",
+    type: "paper",
+  },
+  {
+    title: "Violence Spills Over: A Four-Wave Cross-Lagged Analysis of Interpersonal Violence Exposure and Dating Aggression",
+    authors: "Munshi, I., & Simon, V.A.",
+    conference: "Graduate Student Research Day, Wayne State University",
+    year: "2026",
+    location: "Detroit, MI",
+    type: "paper",
+  },
+  {
+    title: "Young Adolescent Girls' Perceived Peer Norms of Sexual Behavior Predict their Subsequent Sexual Behaviors",
+    authors: "Huber, J., Munshi, I., & Simon, V. A.",
+    conference: "Annual Rodney Clark Memorial Poster Day, Wayne State University",
+    year: "2026",
+    location: "Detroit, MI",
+    type: "poster",
+  },
+  {
     title: "Psychometric Properties of the Conflict in Dating Relationships Inventory (Short-Form) Among Lesbian, Gay, and Bisexual Young Adults",
     authors: "Munshi, I., Palmer, C., Simon, V. A.",
     conference: "Association for Psychological Science",
@@ -312,8 +336,8 @@ function CountUp({ value, isInView }: { value: number; isInView: boolean }) {
 }
 
 const stats = [
-  { label: "Paper Presentations", value: 16 },
-  { label: "Poster Presentations", value: 15 },
+  { label: "Paper Presentations", value: 18 },
+  { label: "Poster Presentations", value: 16 },
   { label: "Symposia", value: 2 },
 ];
 
