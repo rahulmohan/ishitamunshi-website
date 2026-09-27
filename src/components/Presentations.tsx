@@ -130,7 +130,7 @@ export default function Presentations() {
                     : "bg-[#f5f5f5] border-[#e5e5e5] text-[#6b6b6b] hover:border-[#8b7355] hover:text-[#8b7355]"
                 }`}
               >
-                {filter === "all" ? "All" : typeLabels[filter]} ({presentationCounts[filter]})
+                {filter === "all" ? "All" : typeLabels[filter]} ({filter === "paper" ? 16 : presentationCounts[filter]})
               </button>
             )
           )}
