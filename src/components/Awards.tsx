@@ -13,7 +13,7 @@ const awards = [
     type: "fellowship",
   },
   {
-    title: "Pre-Doctoral Fellowship",
+    title: "Co-President & Pre-Doctoral Fellow",
     source: "Merrill Palmer Skillman Institute",
     year: "2025–2027",
     amount: "$6,000",
@@ -70,12 +70,13 @@ const awards = [
 ];
 
 const affiliations = [
-  { name: "Merrill Palmer Skillman Institute", role: "Fellow", year: "2025" },
+  { name: "Merrill Palmer Skillman Institute", role: "Co-President & Pre-Doctoral Fellow", year: "2025" },
   { name: "Society for Research in Child Development", role: "Member", year: "2025" },
   { name: "Association for Behavioral and Cognitive Therapies", role: "Member", year: "2022" },
   { name: "American Psychological Association", role: "Member", year: "2021" },
   { name: "Psi-Chi International Honor Society", role: "Member", year: "2022" },
   { name: "Society for Research on Adolescence", role: "Member", year: "2022" },
+  { name: "NextGen Psych Scholars Program", role: "Mentee", year: "2022–2023" },
 ];
 
 // Count-up animation for dollar amounts - must be outside main component

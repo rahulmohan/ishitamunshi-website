@@ -209,6 +209,24 @@ const photos = [
     position: { top: "86%", left: "12%" },
     mobileOrder: 22,
   },
+  {
+    src: "/photos/aps2026-ishita.png",
+    alt: "APS 2026 in Barcelona",
+    caption: "APS 2026, Barcelona, Spain",
+    rotate: -3,
+    size: "large",
+    position: { top: "100%", left: "15%" },
+    mobileOrder: 23,
+  },
+  {
+    src: "/photos/park-guell.png",
+    alt: "Park Güell, Barcelona, Spain",
+    caption: "Park Güell, Barcelona, Spain",
+    rotate: 3,
+    size: "large",
+    position: { top: "100%", left: "58%" },
+    mobileOrder: 24,
+  },
 ];
 
 const sizeClasses = {
@@ -263,7 +281,7 @@ export default function MyJourney() {
             className="mt-8 flex flex-wrap justify-center gap-8 md:gap-16"
           >
             {[
-              { number: "2", label: "Continents" },
+              { number: "3", label: "Continents" },
               { number: "3", label: "Universities" },
               { number: "∞", label: "Memories" },
             ].map((stat, index) => (
@@ -286,7 +304,7 @@ export default function MyJourney() {
         </motion.div>
 
         {/* Collage Container - Desktop */}
-        <div className="hidden md:block relative h-[2200px]">
+        <div className="hidden md:block relative h-[2200px] mb-[360px]">
           {photos.map((photo, index) => (
             <motion.div
               key={photo.src}

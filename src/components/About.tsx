@@ -3,6 +3,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
+import { presentationCounts } from "../data/presentations";
+
 // Count-up animation component with suffix support
 function CountUpWithSuffix({ value, isInView }: { value: string; isInView: boolean }) {
   const numValue = parseInt(value.replace(/[^0-9]/g, ""));
@@ -126,7 +128,7 @@ export default function About() {
           >
             <div className="space-y-6 font-[family-name:var(--font-inter)] text-[--muted] font-light leading-relaxed">
               <p>
-                I'm a doctoral candidate in Psychology at Wayne State University
+                I&apos;m a doctoral candidate in Psychology at Wayne State University
                 investigating how early life experiences shape the way people love,
                 connect, and form relationships. Trained in developmental, clinical,
                 and quantitative psychology, my work sits at the intersection of
@@ -145,7 +147,7 @@ export default function About() {
                 technology not merely mediates relationships, but becomes a relational
                 partner itself? Rather than asking how people fall in love through
                 technology, I ask what it means to fall in love with technology—such
-                as an AI girlfriend—and how these relationships shape users' romantic
+                as an AI girlfriend—and how these relationships shape users&apos; romantic
                 competence, intimacy, and functioning in human relationships.
               </p>
             </div>
@@ -245,7 +247,7 @@ export default function About() {
               {[
                 { number: "6+", label: "Publications" },
                 { number: "20+", label: "Citations" },
-                { number: "37+", label: "Presentations" },
+                { number: String(presentationCounts.all), label: "Presentations" },
                 { number: "750+", label: "Clinical Hours" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">

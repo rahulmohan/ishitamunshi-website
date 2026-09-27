@@ -10,6 +10,7 @@ const navItems = [
   { name: "Awards", href: "#awards" },
   { name: "Research", href: "#research" },
   { name: "Teaching", href: "#teaching" },
+  { name: "Service", href: "#service" },
   { name: "My Journey", href: "#journey" },
   { name: "Contact", href: "#contact" },
 ];
@@ -49,7 +50,7 @@ export default function Navigation() {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item, index) => (
               <motion.li
                 key={item.name}
@@ -70,7 +71,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative w-8 h-8 flex flex-col justify-center items-center"
+            className="lg:hidden relative w-8 h-8 flex flex-col justify-center items-center"
             aria-label="Toggle menu"
           >
             <motion.span
@@ -97,14 +98,14 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-lg md:hidden"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-lg lg:hidden overflow-y-auto"
           >
             <motion.nav
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ delay: 0.1, duration: 0.4 }}
-              className="flex flex-col items-center justify-center h-full gap-8"
+              className="flex flex-col items-center justify-center min-h-full gap-5 px-6 pt-24 pb-8"
             >
               {navItems.map((item, index) => (
                 <motion.a

@@ -5,11 +5,10 @@ import { useRef, useState, useEffect } from "react";
 
 const teachingExperience = [
   {
-    course: "PSY 3993",
-    title: "Laboratory in Experimental Psychology",
-    semester: "Fall 2025",
+    course: "PSY 1010",
+    title: "Introduction to Psychology - Laboratory",
+    semester: "Fall 2026; Winter 2025; Fall 2024; Spring–Summer 2024; Winter 2024; Fall 2023",
     institution: "Wayne State University",
-    current: true,
   },
   {
     course: "PSY 3310",
@@ -18,16 +17,9 @@ const teachingExperience = [
     institution: "Wayne State University",
   },
   {
-    course: "PSY 1030",
-    title: "Introductory Psychology Laboratory",
-    semester: "Fall 2024 – Spring 2025",
-    institution: "Wayne State University",
-    recurring: true,
-  },
-  {
-    course: "PSY 1010",
-    title: "Introductory Psychology",
-    semester: "Fall 2023 – Winter 2024",
+    course: "PSY 3993",
+    title: "Experimental Psychology - Laboratory",
+    semester: "Fall 2025; Winter 2026; Spring–Summer 2026",
     institution: "Wayne State University",
   },
   {
@@ -123,10 +115,9 @@ export default function Teaching() {
           className="flex flex-wrap justify-center gap-12 mb-16 py-8 border-y border-[--border]"
         >
           {[
-            { value: "12+", label: "Course Sections" },
-            { value: "200+", label: "Students Taught" },
-            { value: "6", label: "Unique Courses" },
-          ].map((stat, index) => (
+            { value: "17", label: "Course Sections" },
+            { value: "300+", label: "Students Taught" },
+          ].map((stat) => (
             <div key={stat.label} className="text-center">
               <span className="font-[family-name:var(--font-cormorant)] text-4xl font-light gradient-text">
                 <CountUpWithSuffix value={stat.value} isInView={isInView} />
@@ -146,28 +137,21 @@ export default function Teaching() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 + index * 0.08 }}
-              className={`group relative bg-white p-6 border border-[--border] hover:border-[--accent] transition-all duration-300 hover:shadow-lg ${
-                course.current ? "ring-1 ring-[--accent]" : ""
-              }`}
+              className="group relative bg-white p-6 border border-[--border] hover:border-[--accent] transition-all duration-300 hover:shadow-lg"
             >
-              {course.current && (
-                <span className="absolute -top-3 left-4 px-2 py-1 bg-[--accent] text-white text-[10px] tracking-wider uppercase">
-                  Current
-                </span>
-              )}
-
-              <div className="flex items-start justify-between mb-4">
+              <div className="mb-4">
                 <span className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-[--accent]">
                   {course.course}
-                </span>
-                <span className="font-[family-name:var(--font-inter)] text-[10px] text-[--muted]">
-                  {course.semester}
                 </span>
               </div>
 
               <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-medium mb-3 group-hover:text-[--accent] transition-colors">
                 {course.title}
               </h3>
+
+              <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted] leading-relaxed mb-3">
+                ({course.semester})
+              </p>
 
               <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted]">
                 {course.institution}

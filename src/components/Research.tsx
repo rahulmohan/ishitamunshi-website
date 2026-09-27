@@ -5,6 +5,12 @@ import { useRef, useState, useEffect } from "react";
 
 const researchProjects = [
   {
+    title: "Project BRAVE",
+    role: "Graduate Research Assistant",
+    description:
+      "Graduate Research Assistant for Building Resilience Among Adolescents using Virtual Environments (BRAVE). Actively involved in in-person data collection with adolescents using physiological and virtual reality tools and juvenile victimization screening to assess a broad range of childhood and adolescent victimization experiences. Additional responsibilities include participant recruitment and compensation, research protocol development and IRB preparation in collaboration with the PI, and overall laboratory project coordination and management.",
+  },
+  {
     title: "Project SPARK",
     role: "Team Lead, Graduate Research Assistant",
     institution: "Wayne State University",
@@ -233,9 +239,11 @@ export default function Research() {
               >
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
                   <div>
-                    <span className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-[--accent] block mb-2">
-                      {project.period}
-                    </span>
+                    {project.period ? (
+                      <span className="font-[family-name:var(--font-inter)] text-xs tracking-wider text-[--accent] block mb-2">
+                        {project.period}
+                      </span>
+                    ) : null}
                     <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium group-hover:text-[--accent] transition-colors">
                       {project.title}
                     </h3>
@@ -243,14 +251,20 @@ export default function Research() {
                       {project.role}
                     </p>
                   </div>
-                  <div className="lg:text-right">
-                    <p className="font-[family-name:var(--font-inter)] text-sm font-medium">
-                      {project.institution}
-                    </p>
-                    <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted]">
-                      PI: {project.pi}
-                    </p>
-                  </div>
+                  {project.institution || project.pi ? (
+                    <div className="lg:text-right">
+                      {project.institution ? (
+                        <p className="font-[family-name:var(--font-inter)] text-sm font-medium">
+                          {project.institution}
+                        </p>
+                      ) : null}
+                      {project.pi ? (
+                        <p className="font-[family-name:var(--font-inter)] text-xs text-[--muted]">
+                          PI: {project.pi}
+                        </p>
+                      ) : null}
+                    </div>
+                  ) : null}
                 </div>
                 <p className="font-[family-name:var(--font-inter)] text-sm text-[--muted] leading-relaxed">
                   {project.description}
