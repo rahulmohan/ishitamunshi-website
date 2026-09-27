@@ -37,15 +37,7 @@ export const presentations: Presentation[] = [
   {
     title: "Violence Spills Over: A Four-Wave Cross-Lagged Analysis of Interpersonal Violence Exposure and Dating Aggression",
     authors: "Munshi, I., & Simon, V.A.",
-    conference: "Lifespan Alliance Day, Merrill Palmer Skillman Institute, Wayne State University",
-    year: "2026",
-    location: "Detroit, MI",
-    type: "paper",
-  },
-  {
-    title: "Violence Spills Over: A Four-Wave Cross-Lagged Analysis of Interpersonal Violence Exposure and Dating Aggression",
-    authors: "Munshi, I., & Simon, V.A.",
-    conference: "Graduate Student Research Day, Wayne State University",
+    conference: "Lifespan Alliance Day, Merrill Palmer Skillman Institute, Wayne State University; Graduate Student Research Day, Wayne State University",
     year: "2026",
     location: "Detroit, MI",
     type: "paper",

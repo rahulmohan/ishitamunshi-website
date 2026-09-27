@@ -6,6 +6,7 @@ import Research from "@/components/Research";
 import Publications from "@/components/Publications";
 import Presentations from "@/components/Presentations";
 import Teaching from "@/components/Teaching";
+import ProfessionalAffiliations from "@/components/ProfessionalAffiliations";
 import Service from "@/components/Service";
 import Awards from "@/components/Awards";
 import MyJourney from "@/components/MyJourney";
@@ -24,6 +25,7 @@ export default function Home() {
       <Awards />
       <Research />
       <Teaching />
+      <ProfessionalAffiliations />
       <Service />
       <MyJourney />
       <Contact />
