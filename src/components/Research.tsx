@@ -7,6 +7,9 @@ const researchProjects = [
   {
     title: "Project BRAVE",
     role: "Graduate Research Assistant",
+    institution: "Wayne State University",
+    pi: "Valerie Simon, Ph.D.",
+    period: "2025 – Present",
     description:
       "Graduate Research Assistant for Building Resilience Among Adolescents using Virtual Environments (BRAVE). Actively involved in in-person data collection with adolescents using physiological and virtual reality tools and juvenile victimization screening to assess a broad range of childhood and adolescent victimization experiences. Additional responsibilities include participant recruitment and compensation, research protocol development and IRB preparation in collaboration with the PI, and overall laboratory project coordination and management.",
   },

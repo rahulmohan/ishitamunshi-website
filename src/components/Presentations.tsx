@@ -35,7 +35,7 @@ function CountUp({ value, isInView }: { value: number; isInView: boolean }) {
 }
 
 const stats = [
-  { label: "Paper Presentations", value: presentationCounts.paper },
+  { label: "Paper Presentations", value: 17 },
   { label: "Poster Presentations", value: presentationCounts.poster },
   { label: "Symposia", value: presentationCounts.symposium },
 ];

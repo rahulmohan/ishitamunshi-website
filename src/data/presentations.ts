@@ -11,11 +11,10 @@ interface Presentation {
 export const presentations: Presentation[] = [
   // 2026
   {
-    title: "What Are Users Asking ChatGPT? A Thematic Analysis of Clinically Relevant Problematic Content in 500,000+ Human-AI Conversations",
-    authors: "Munshi, I., & Mohan, R.",
+    title: "Violence Spills Over: A Four-Wave Cross-Lagged Analysis of Interpersonal Violence Exposure and Dating Aggression",
+    authors: "Munshi, I., & Simon, V.A.",
     conference: "Association for Behavioral and Cognitive Therapies Annual Convention",
     year: "2026",
-    month: "November",
     location: "Baltimore, MD",
     type: "poster",
   },
@@ -24,16 +23,14 @@ export const presentations: Presentation[] = [
     authors: "Munshi, I., & Simon, V.A.",
     conference: "Association for Behavioral and Cognitive Therapies Annual Convention",
     year: "2026",
-    month: "November",
     location: "Baltimore, MD",
     type: "poster",
   },
   {
-    title: "Violence Spills Over: A Four-Wave Cross-Lagged Analysis of Interpersonal Violence Exposure and Dating Aggression",
-    authors: "Munshi, I., & Simon, V.A.",
+    title: "What Are Users Asking ChatGPT? A Thematic Analysis of Clinically Relevant Problematic Content in 500,000+ Human-AI Conversations",
+    authors: "Munshi, I., & Mohan, R.",
     conference: "Association for Behavioral and Cognitive Therapies Annual Convention",
     year: "2026",
-    month: "November",
     location: "Baltimore, MD",
     type: "poster",
   },

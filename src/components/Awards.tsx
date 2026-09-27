@@ -70,13 +70,16 @@ const awards = [
 ];
 
 const affiliations = [
-  { name: "Merrill Palmer Skillman Institute", role: "Co-President & Pre-Doctoral Fellow", year: "2025" },
+  { name: "Association for Psychological Science", role: "Member", year: "2025–2027" },
+  { name: "Merrill Palmer Skillman Institute", role: "Co-President & Pre-Doctoral Fellow", year: "2025–Present" },
   { name: "Society for Research in Child Development", role: "Member", year: "2025" },
   { name: "Association for Behavioral and Cognitive Therapies", role: "Member", year: "2022" },
-  { name: "American Psychological Association", role: "Member", year: "2021" },
-  { name: "Psi-Chi International Honor Society", role: "Member", year: "2022" },
+  { name: "American Psychological Association", role: "Member", year: "2021, 2022" },
+  { name: "Psi-Chi, International Honor Society in Psychology", role: "Member", year: "2022" },
   { name: "Society for Research on Adolescence", role: "Member", year: "2022" },
   { name: "NextGen Psych Scholars Program", role: "Mentee", year: "2022–2023" },
+  { name: "Midwestern Psychological Association", role: "Member", year: "2020" },
+  { name: "Mental Health Foundation–India (MHF–I)", role: "Member", year: "2018" },
 ];
 
 // Count-up animation for dollar amounts - must be outside main component

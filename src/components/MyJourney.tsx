@@ -5,31 +5,30 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 
 const photos = [
-  // Row 1
   {
-    src: "/photos/graduation.jpg",
-    alt: "Graduation celebration",
-    caption: "MA Clinical Psychology - Graduation Day, 2023",
+    src: "/photos/with_dr_simon_award_2026.jpg",
+    alt: "With Dr. Valerie Simon receiving Graduate Student Research Presentation Award",
+    caption: "Research Presentation Award with Dr. Simon, 2026",
     rotate: -3,
-    size: "large",
+    size: "medium",
     position: { top: "0%", left: "5%" },
     mobileOrder: 1,
   },
   {
-    src: "/photos/nyc-skyline.jpg",
-    alt: "NYC Skyline",
-    caption: "NYC nights - ABCT 2022",
-    rotate: 4,
-    size: "medium",
+    src: "/photos/aps2026-ishita.png",
+    alt: "APS 2026 in Barcelona",
+    caption: "APS 2026, Barcelona, Spain",
+    rotate: -3,
+    size: "large",
     position: { top: "5%", left: "42%" },
     mobileOrder: 2,
   },
   {
-    src: "/photos/award.jpg",
-    alt: "Graduate Student Award",
-    caption: "Excellent Achievement Award Day!",
-    rotate: -2,
-    size: "small",
+    src: "/photos/park-guell.png",
+    alt: "Park Güell, Barcelona, Spain",
+    caption: "Park Güell, Barcelona, Spain",
+    rotate: 3,
+    size: "large",
     position: { top: "2%", left: "70%" },
     mobileOrder: 3,
   },
@@ -42,7 +41,6 @@ const photos = [
     position: { top: "10%", left: "85%" },
     mobileOrder: 4,
   },
-  // Row 2
   {
     src: "/photos/cleveland-sign.jpg",
     alt: "Cleveland Sign",
@@ -79,8 +77,7 @@ const photos = [
     position: { top: "26%", left: "75%" },
     mobileOrder: 8,
   },
-  // Row 3
-    {
+  {
     src: "/photos/chicago_views_mpa_2025.JPG",
     alt: "Chicago views MPA 2025",
     caption: "Chicago views - MPA 2025",
@@ -107,7 +104,6 @@ const photos = [
     position: { top: "33%", left: "52%" },
     mobileOrder: 11,
   },
-  // Row 4
   {
     src: "/photos/presenting.jpg",
     alt: "Presenting at conference",
@@ -144,7 +140,6 @@ const photos = [
     position: { top: "48%", left: "72%" },
     mobileOrder: 15,
   },
-  // Row 5
   {
     src: "/photos/wayne-state.jpg",
     alt: "Wayne State University",
@@ -201,39 +196,33 @@ const photos = [
     mobileOrder: 21,
   },
   {
-    src: "/photos/with_dr_simon_award_2026.jpg",
-    alt: "With Dr. Valerie Simon receiving Graduate Student Research Presentation Award",
-    caption: "Research Presentation Award with Dr. Simon, 2026",
+    src: "/photos/graduation.jpg",
+    alt: "Graduation celebration",
+    caption: "MA Clinical Psychology - Graduation Day, 2023",
     rotate: -3,
-    size: "medium",
+    size: "large",
     position: { top: "86%", left: "12%" },
     mobileOrder: 22,
   },
   {
-    src: "/photos/aps2026-ishita.png",
-    alt: "APS 2026 in Barcelona",
-    caption: "APS 2026, Barcelona, Spain",
-    rotate: -3,
-    size: "large",
+    src: "/photos/nyc-skyline.jpg",
+    alt: "NYC Skyline",
+    caption: "NYC nights - ABCT 2022",
+    rotate: 4,
+    size: "medium",
     position: { top: "100%", left: "15%" },
     mobileOrder: 23,
   },
   {
-    src: "/photos/park-guell.png",
-    alt: "Park Güell, Barcelona, Spain",
-    caption: "Park Güell, Barcelona, Spain",
-    rotate: 3,
-    size: "large",
+    src: "/photos/award.jpg",
+    alt: "Graduate Student Award",
+    caption: "Excellent Achievement Award Day!",
+    rotate: -2,
+    size: "small",
     position: { top: "100%", left: "58%" },
     mobileOrder: 24,
   },
 ];
-
-const sizeClasses = {
-  small: "w-40 h-48 md:w-44 md:h-52",
-  medium: "w-48 h-56 md:w-56 md:h-64",
-  large: "w-56 h-64 md:w-72 md:h-80",
-};
 
 export default function MyJourney() {
   const ref = useRef(null);
@@ -304,7 +293,7 @@ export default function MyJourney() {
         </motion.div>
 
         {/* Collage Container - Desktop */}
-        <div className="hidden md:block relative h-[2200px] mb-[360px]">
+        <div className="hidden md:grid grid-cols-3 items-start gap-x-10 gap-y-16 px-6 py-6">
           {photos.map((photo, index) => (
             <motion.div
               key={photo.src}
@@ -321,17 +310,13 @@ export default function MyJourney() {
                 scale: { duration: 0.3 },
                 rotate: { duration: 0.3 },
               }}
-              className={`absolute ${sizeClasses[photo.size as keyof typeof sizeClasses]} cursor-pointer`}
-              style={{
-                top: photo.position.top,
-                left: photo.position.left,
-              }}
+              className="relative w-full cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               onClick={() => setSelectedPhoto(photo)}
             >
               {/* Polaroid frame */}
-              <div className="relative w-full h-full bg-white p-2 pb-8 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              <div className="relative w-full bg-white p-2 shadow-lg hover:shadow-2xl transition-shadow duration-300"
                 style={{
                   boxShadow: hoveredIndex === index
                     ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
@@ -339,7 +324,7 @@ export default function MyJourney() {
                 }}
               >
                 {/* Photo */}
-                <div className="relative w-full h-[calc(100%-2rem)] overflow-hidden bg-gray-100">
+                <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-100">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
@@ -351,8 +336,8 @@ export default function MyJourney() {
                 </div>
 
                 {/* Handwritten caption */}
-                <div className="absolute bottom-1 left-0 right-0 text-center">
-                  <p className="font-[family-name:var(--font-cormorant)] text-lg text-[--foreground]/80 italic">
+                <div className="px-2 pt-3 pb-2 text-center">
+                  <p className="font-[family-name:var(--font-cormorant)] text-lg text-[--foreground]/80 italic leading-snug">
                     {photo.caption}
                   </p>
                 </div>
