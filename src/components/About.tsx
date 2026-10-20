@@ -246,7 +246,7 @@ export default function About() {
             >
               {[
                 { number: "6+", label: "Publications" },
-                { number: "20+", label: "Citations" },
+                { number: "30+", label: "Citations" },
                 { number: String(presentationCounts.all), label: "Presentations" },
                 { number: "750+", label: "Clinical Hours" },
               ].map((stat) => (
