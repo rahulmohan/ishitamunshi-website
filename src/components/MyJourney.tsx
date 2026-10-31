@@ -6,6 +6,16 @@ import Image from "next/image";
 
 const photos = [
   {
+    src: "/photos/best_poster_award_poster_day_2026.jpeg",
+    alt: "Holding the Best Poster Award certificate at Wayne State Psychology Graduate Student Poster Day",
+    caption: "Best Poster Award at Poster Day, 2026",
+    rotate: 3,
+    size: "medium",
+    position: { top: "0%", left: "5%" },
+    objectPosition: "30% center",
+    mobileOrder: 0,
+  },
+  {
     src: "/photos/with_dr_simon_award_2026.jpg",
     alt: "With Dr. Valerie Simon receiving Graduate Student Research Presentation Award",
     caption: "Research Presentation Award with Dr. Simon, 2026",
