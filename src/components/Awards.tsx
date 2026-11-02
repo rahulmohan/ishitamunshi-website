@@ -21,6 +21,14 @@ const awards = [
     type: "fellowship",
   },
   {
+    title: "Best Poster Award",
+    source: "Wayne State University, Department of Psychology",
+    year: "2026",
+    amount: "$150",
+    description: "Recognition for presenting an outstanding poster of original research at the Graduate Student Poster Day.",
+    type: "honor",
+  },
+  {
     title: "Graduate Student Research Presentation Award",
     source: "Wayne State University, Department of Psychology",
     year: "2026",
@@ -152,7 +160,7 @@ export default function Awards() {
           className="text-center mb-16"
         >
           <span className="font-[family-name:var(--font-cormorant)] text-6xl sm:text-7xl font-light gradient-text">
-            <CountUpDollar value={39000} isInView={isInView} />
+            <CountUpDollar value={39150} isInView={isInView} />
           </span>
           <p className="font-[family-name:var(--font-inter)] text-sm text-[--muted] mt-4 tracking-wide">
             Total Research Funding & Awards
